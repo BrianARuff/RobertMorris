@@ -2,111 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfa9dc10-8599-4e74-9091-b31f91467ff9" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/MrMorris.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Rakefile" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/config/manifest.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/.keep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/cable.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/channels/.keep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/events.coffee" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/static_pages.coffee" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/events.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/static_pages.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/channels/application_cable/channel.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/channels/application_cable/connection.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/controllers/concerns/.keep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/controllers/events_controller.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/helpers/events_helper.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/helpers/static_pages_helper.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/jobs/application_job.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/mailers/application_mailer.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/models/application_record.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/models/concerns/.keep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/models/event.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/events/edit.html.erb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/events/index.html.erb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/events/show.html.erb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.text.erb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/static_pages/about.html.erb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/static_pages/contact.html.erb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/bundle" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/rails" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/rake" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/setup" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/spring" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/update" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/yarn" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config.ru" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/boot.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/cable.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/database.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/environment.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/environments/test.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/initializers/application_controller_renderer.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/initializers/cookies_serializer.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/initializers/filter_parameter_logging.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/initializers/inflections.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/puma.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/secrets.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/spring.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20180106095002_create_events.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/db/seeds.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/assets/.keep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/tasks/.keep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/log/.keep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/404.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/422.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/500.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/apple-touch-icon-precomposed.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/apple-touch-icon.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/favicon.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/robots.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/application_system_test_case.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/controllers/.keep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/controllers/events_controller_test.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/controllers/static_pages_controller_test.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/.keep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/events.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/files/.keep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/helpers/.keep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/integration/.keep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/mailers/.keep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/models/.keep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/models/event_test.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/system/.keep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test_helper.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tmp/.keep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vendor/.keep" />
+      <change beforePath="$PROJECT_DIR$/.idea/MrMorris.iml" afterPath="$PROJECT_DIR$/.idea/MrMorris.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -116,7 +18,38 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="_nav.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_nav.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -124,13 +57,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/database.yml" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
       </list>
     </option>
   </component>
@@ -180,6 +114,39 @@
               <item name="MrMorris" type="b2602c69:ProjectViewProjectNode" />
               <item name="MrMorris" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MrMorris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MrMorris" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MrMorris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MrMorris" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MrMorris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MrMorris" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MrMorris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MrMorris" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MrMorris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MrMorris" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -200,6 +167,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/images" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -330,12 +302,12 @@
       <option name="presentableId" value="Default" />
       <updated>1515231948612</updated>
       <workItem from="1515231949952" duration="856000" />
-      <workItem from="1515232983044" duration="206000" />
+      <workItem from="1515232983044" duration="1859000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1062000" />
+    <option name="totallyTimeSpent" value="2715000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1857" height="1092" extended-state="6" />
@@ -402,36 +374,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="47" column="4" lean-forward="false" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -440,10 +383,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_nav.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/static_pages.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_nav.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
           <folding />
         </state>
       </provider>

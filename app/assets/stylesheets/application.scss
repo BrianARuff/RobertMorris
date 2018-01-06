@@ -1,3 +1,14 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background: url(mic.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 // Variables
 $baseMenuBackground: #111;          // Base color theme
 $secondaryMenuBackground: #0186ba;  // Secondary color (highlights, triangles...)

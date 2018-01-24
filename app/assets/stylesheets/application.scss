@@ -3,11 +3,6 @@
 
 /* base styles */
 
-section {
-  background-color: #1f1f1f;
-  color: #fff;
-  text-align: center;
-}
 
 /* nav styles */
 
@@ -28,7 +23,7 @@ nav {
 
 nav li a {
   margin: 1rem;
-  color: #fff;
+  color: #D1C395;
   background-color: #292929;
   padding: 25px;
   border: 1px solid #7f7e7e;
@@ -45,7 +40,7 @@ nav li a {
     margin: 0 0 0 0;
   }
 
-  
+
 }
 
 nav li:nth-of-type(1) a {
@@ -60,4 +55,32 @@ nav a:hover {
   border: 1px solid #fff;
   border-radius: 5px;
   font-weight: bold;
+}
+
+/*section home */
+
+.home {
+  padding: 25px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('mic.jpg') no-repeat center;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+
+.home article h1 {
+  font-weight: bold;
+  color: #D1C395;
+  font-size: 54px;
+  background: rgba(47, 65, 83,0.5);
+  border: 1px solid #D1C395;
+  border-radius: 5px;
+  margin: 1rem;
+  padding-top: 20rem;
+  padding-bottom: 20rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }

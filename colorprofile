@@ -1,6 +1,7 @@
 Top color listed first followed by accent colors from light to dark. Tetradic scheme used.
 
 top-left-colors
+light blue
 main: #47525f
 1: #828a93
 2: #606A77
@@ -8,6 +9,7 @@ main: #47525f
 4: 1c2838
 
 top-right-colors
+purple color
 main: 4f4d65
 1. 18d8b9d
 2. 6a677e
@@ -15,6 +17,7 @@ main: 4f4d65
 4. 221f3b
 
 bottom-left-colors
+light brown
 main: 918869
 1. e1dbc4
 2. b6ad90
@@ -22,6 +25,7 @@ main: 918869
 4. 554b26
 
 bottom-right-colors
+darker brown
 main: 918269
 1. e1d6c4
 2. b6a790

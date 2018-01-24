@@ -1,0 +1,24 @@
+<main>
+  <article class="show-booking">
+    <section class="booking-notice">
+    <small><%= notice %></small>
+    </section>
+    <section class="booking-name">
+      <h1>Name: <%= @booking.name %></h1>
+    </section>
+    <section class="booking-number">
+      <h2>Phone Number: <%= number_to_phone(@booking.number) %></h2>
+    </section>
+    <section class="booking-email">
+      <h3>Email Address: <%= @booking.email %></h3>
+    </section>
+    <section class="booking-message">
+      <h4><%= @booking.message %></h4>
+    </section>
+    <section>
+        <%= link_to 'Edit', edit_booking_path(@booking), class: 'btn btn-warning' %>
+    </section>
+  </article>
+</main>
+
+

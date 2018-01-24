@@ -6,6 +6,8 @@
 body {
   font-family: 'Poppins', sans-serif;
   background: #47525f;
+  margin: 2rem;
+  padding: 2rem;
 
 }
 
@@ -98,3 +100,79 @@ nav a:hover {
   margin: 1rem;
   font-size: 16px;
 }
+
+/*  new booksings */
+
+.new-bookings, .edit-bookings {
+  color: #D1C395;
+}
+
+.new-bookings h1 {
+  font-weight: bold;
+}
+/* new bookings form labels */
+body > main > div > form > div > label {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+/* new bookings form background */
+#booking_message, 
+#booking_name, 
+#booking_number, 
+#booking_email {
+  background: #e1dbc4;
+  font-size: 24px;
+  color: #47525f;
+  text-align: center;
+}
+
+/* submit new booking button */
+
+body > main > div > form > div.actions > input {
+  background: #e1dbc4;
+  color: #635c43;
+  font-size: 16px;
+  font-weight: bold;
+}
+body > main > div > form > div.actions > input:hover, 
+body > main > div > form > div.actions > input:hover {
+  background-color: #47525f !important;
+  color: #D1C395;
+  font-size: 24px;
+  border: 1px solid #fff;
+}
+
+
+/* bookings show page */
+
+.show-booking {
+  text-align: center;
+  border: 1px solid #7f7e7e;
+  color: #D1C395;
+}
+
+.booking-message h4 {
+  font-size: 24px;
+}
+
+/* show edit button */
+body > main > article > section:nth-child(6) > a {
+  background-color: #D1C395;
+  color: #47525f;
+  border: 1px solid #7f7e7e;
+  border-radius: 5px;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* bookings index page */
+ .bookings-index {
+  display: grid;
+  grid-template-columns: repeat(6fr);
+  grid-gap: 5px;
+  min-height: 200px;
+  color: #D1C395;
+ }

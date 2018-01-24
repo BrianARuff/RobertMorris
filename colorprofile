@@ -1,0 +1,29 @@
+Top color listed first followed by accent colors from light to dark. Tetradic scheme used.
+
+top-left-colors
+main: #47525f
+1: #828a93
+2: #606A77
+3: #2e3741
+4: 1c2838
+
+top-right-colors
+main: 4f4d65
+1. 18d8b9d
+2. 6a677e
+3. 343245
+4. 221f3b
+
+bottom-left-colors
+main: 918869
+1. e1dbc4
+2. b6ad90
+3. 635c43
+4. 554b26
+
+bottom-right-colors
+main: 918269
+1. e1d6c4
+2. b6a790
+3. 635743
+4. 554326

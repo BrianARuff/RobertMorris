@@ -5,13 +5,35 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track':
+        'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
-  <%= render 'layouts/nav' %>
-  <div class="container">
-    <%= yield %>
-  </div>
+      <nav>
+          <li>
+              <a href="<%= static_pages_home_path %>"><%= image_tag 'morrislogo2.png' %></a>
+          </li>
+          <li>
+            <a href="<%= static_pages_home_path %>">Home</a>
+          </li>
+          <li>
+            <a href="<%= static_pages_home_path %>">Events</a>
+          </li>
+          <li>
+            <a href="<%= static_pages_about_path %>">About Robert</a>
+          </li>
+          <li>
+            <a href="#">Book Robert</a>            
+          </li>
+          <li>
+              <a href="<%= static_pages_contact_path %>">Contact us</a>
+          </li>
+          <li>
+            <a href="#">What People Are Saying</a>
+          </li>
+      </nav>
+  <%= yield %>
   </body>
 </html>

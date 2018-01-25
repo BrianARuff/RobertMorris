@@ -9,6 +9,7 @@ body {
   margin: 2rem;
   padding: 2rem;
   overflow: scroll;
+  color: #e1d6c4 !important;
 }
 
 #main-content {
@@ -38,7 +39,6 @@ nav {
 
 nav li a, #main-content > nav > a {
   margin: 0 1rem;
-  color: #D1C395;
   background-color: #47525F;
   padding: 25px;
   border: 1px solid #7f7e7e;
@@ -48,6 +48,7 @@ nav li a, #main-content > nav > a {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   box-shadow: 5px 10px #1c2838;
+  color: #e1d6c4;
 
 }
 
@@ -95,7 +96,6 @@ nav a:hover, #main-content > nav > a:hover  {
   padding: 10px 10px 10px 30px;
   text-decoration: none;
   font-size: 22px;
-  color: #D1C395;
   display: block;
   transition: 0.5s;
 }
@@ -139,7 +139,6 @@ nav a:hover, #main-content > nav > a:hover  {
   align-items: center;
   align-items: center;
   justify-content: center;
-  color: #D1C395;
 }
 
 .welcome-card {
@@ -168,7 +167,7 @@ nav a:hover, #main-content > nav > a:hover  {
 /*  new booksings */
 
 .new-bookings, .edit-bookings, #main-content > div.col-md-6.col-md-offset-3 {
-  color: #D1C395;
+  color: #e1d6c4;
 }
 
 .new-bookings h1 {
@@ -178,7 +177,7 @@ nav a:hover, #main-content > nav > a:hover  {
 body > main > div > form > div > label, .sign-in {
   font-size: 20px;
   font-weight: lighter;
-  color: #D1C395;
+  color: #e1d6c4;
 }
 
 /* new bookings form background */

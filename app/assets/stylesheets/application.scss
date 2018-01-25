@@ -9,9 +9,12 @@ body {
   margin: 2rem;
   padding: 2rem;
   overflow: scroll;
-
 }
 
+#main-content {
+  background: url('mic.jpg') no-repeat center;
+  background-size: cover;
+}
 
 /* nav styles */
 
@@ -136,7 +139,6 @@ nav a:hover, #main-content > nav > a:hover  {
   align-items: center;
   align-items: center;
   justify-content: center;
-  background-color: #47525F;
   color: #D1C395;
 }
 
@@ -146,6 +148,8 @@ nav a:hover, #main-content > nav > a:hover  {
   margin: 1rem;
   padding: 1rem;
   box-shadow: 5px 10px #1c2838;
+  background: #4A647D;
+  opacity: 0.9;
 }
 
 .card-title {

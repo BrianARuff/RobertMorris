@@ -63,7 +63,7 @@ nav li:nth-of-type(1) a {
   box-shadow: none;
 }
 
-nav a:hover {
+nav a:hover, #main-content > nav > a:hover  {
   color: #fefefe;
   background: #606A77;
   text-decoration: none;
@@ -207,7 +207,8 @@ body > main > div > form > div.actions > input,
 
 body > main > div > form > div.actions > input:hover,
 #new_user > div.actions > input:hover,
-#main-content > main > div > form > div.actions > input:hover {
+#main-content > main > div > form > div.actions > input:hover,
+  {
   background-color: #47525f;
   color: #D1C395;
   font-size: 24px;

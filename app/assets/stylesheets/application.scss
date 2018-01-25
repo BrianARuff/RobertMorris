@@ -8,6 +8,7 @@ body {
   background: #47525f;
   margin: 2rem;
   padding: 2rem;
+  overflow: scroll;
 
 }
 
@@ -22,6 +23,8 @@ nav {
   justify-content: center;
   border-bottom: 1px solid #7f7e7e;
   list-style: none;
+  overflow: hidden;
+  position: static;
 }
 
 @media (max-width: 768px) {
@@ -41,13 +44,14 @@ nav li a {
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
+  box-shadow: 5px 10px #1c2838;
+
 }
 
 @media screen and (max-width: 768px){
 
   body > nav > li > a {
-    display: block;
-    margin: 0 0 0 0;
+    display: none;
   }
 
 
@@ -56,6 +60,7 @@ nav li a {
 nav li:nth-of-type(1) a {
   background: none;
   border: none;
+  box-shadow: none;
 }
 
 nav a:hover {
@@ -65,6 +70,60 @@ nav a:hover {
   border: 1px solid #fff;
   border-radius: 5px;
   font-weight: bold;
+}
+
+/* side slide bar menu */
+
+.side-nav {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1c2838;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.side-nav a {
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #D1C395;
+  display: block;
+  transition: 0.5s;
+}
+
+.side-nav a:hover {
+  color: #fff;
+}
+
+.side-nav .btn-close {
+  position: absolute;
+  top: 0;
+  right: 22px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #D1C395;
+}
+
+#main-content {
+  transition: margin-left 0.5s;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {display: none;}
+  #main-content > nav > li> a{display: none;}
+  #main-content > nav > li.logo > a > img{display: block;}
+}
+
+@media (min-width: 768px) {
+  .open-slide {
+    display: none;
+  }
 }
 
 /*main home */
@@ -86,6 +145,7 @@ nav a:hover {
   border-radius: 5px;
   margin: 1rem;
   padding: 1rem;
+  box-shadow: 5px 10px #1c2838;
 }
 
 .card-title {

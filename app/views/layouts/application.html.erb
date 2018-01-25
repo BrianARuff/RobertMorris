@@ -10,10 +10,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
   </head>
-
   <body>
+    <div id="main-content">
       <nav>
-          <li>
+        <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+              <svg width="30" height="30">
+                <path d="M0,5 30,5" stroke="#D1C395" stroke-width="5" />
+                <path d="M0,14 30,14" stroke="#D1C395" stroke-width="5" />
+                <path d="M0,23 30,23" stroke="#D1C395" stroke-width="5" />
+              </svg>
+            </a>
+          </span>
+          <li class="logo">
               <a href="<%= home_path %>"><%= image_tag 'morrislogo2.png' %></a>
           </li>
           <li>
@@ -38,6 +47,14 @@
             <a href="<%= bookings_path %>">View Booking Request</a>
           </li>
       </nav>
+      <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
   <%= yield %>
+    </div>
   </body>
 </html>

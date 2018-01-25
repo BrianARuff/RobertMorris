@@ -13,5 +13,14 @@
 //= require rails-ujs
 //= require jquery
 //= require bootstrap-sprockets
-//= require turbolinks
 //= require_tree .
+
+function openSlideMenu() {
+	document.getElementById('main-content').style.marginLeft = '250px';
+	document.getElementById('side-menu').style.width = '250px';
+}
+
+function closeSlideMenu(){
+	document.getElementById('main-content').style.marginLeft = '0';
+	document.getElementById('side-menu').style.width = '0px'
+}

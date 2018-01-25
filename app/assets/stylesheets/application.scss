@@ -10,11 +10,13 @@ body {
   padding: 2rem;
   overflow: scroll;
   color: #e1d6c4 !important;
+  font-weight: bold;
 }
 
 #main-content {
   background: url('mic.jpg') no-repeat center;
   background-size: cover;
+  color: #e1d6c4 !important;
 }
 
 /* nav styles */
@@ -149,6 +151,7 @@ nav a:hover, #main-content > nav > a:hover  {
   box-shadow: 5px 10px #1c2838;
   background: #4A647D;
   opacity: 0.9;
+  color: #e1d6c4 !important;
 }
 
 .card-title {
@@ -167,7 +170,7 @@ nav a:hover, #main-content > nav > a:hover  {
 /*  new booksings */
 
 .new-bookings, .edit-bookings, #main-content > div.col-md-6.col-md-offset-3 {
-  color: #e1d6c4;
+  color: #e1dbc4;
 }
 
 .new-bookings h1 {
@@ -244,15 +247,16 @@ body > main > article > section:nth-child(6) > a {
 }
 
 /* bookings index page */
- .bookings-index {
-  display: grid;
-  grid-template-columns: repeat(6fr);
-  grid-gap: 5px;
-  min-height: 200px;
-  color: #333;
+ .bookings-index h1 {
+  color: #e1d6c4 !important;
+  font-weight: bold !important;
  }
 
  .bookings-index table {
-  color: #333;
+  color: #e1d6c4;
   font-size: 24px;
+ }
+
+ .bookings-index tbody {
+  color: #333;
  }

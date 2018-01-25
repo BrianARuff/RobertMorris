@@ -33,7 +33,7 @@ nav {
   }
 }
 
-nav li a {
+nav li a, #main-content > nav > a {
   margin: 0 1rem;
   color: #D1C395;
   background-color: #47525F;
@@ -50,7 +50,7 @@ nav li a {
 
 @media screen and (max-width: 768px){
 
-  body > nav > li > a {
+  nav > a {
     display: none;
   }
 
@@ -171,33 +171,41 @@ nav a:hover {
   font-weight: bold;
 }
 /* new bookings form labels */
-body > main > div > form > div > label {
+body > main > div > form > div > label, .sign-in {
   font-size: 20px;
   font-weight: lighter;
+  color: #D1C395;
 }
 
 /* new bookings form background */
 #booking_message, 
 #booking_name, 
 #booking_number, 
-#booking_email {
-  background: #e1dbc4;
+#booking_email, 
+#user_email, 
+#user_password,
+  {
+  background: #e1dbc4 !important;
   font-size: 24px;
   color: #47525f;
   text-align: center;
 }
 
-/* submit new booking button */
+/* submit button */
 
-body > main > div > form > div.actions > input {
+body > main > div > form > div.actions > input,
+#new_user > div.actions > input,
+#main-content > main > div > form > div.actions > input {
   background: #e1dbc4;
   color: #635c43;
   font-size: 16px;
   font-weight: bold;
 }
-body > main > div > form > div.actions > input:hover, 
-body > main > div > form > div.actions > input:hover {
-  background-color: #47525f !important;
+
+body > main > div > form > div.actions > input:hover,
+#new_user > div.actions > input:hover,
+#main-content > main > div > form > div.actions > input:hover {
+  background-color: #47525f;
   color: #D1C395;
   font-size: 24px;
   border: 1px solid #fff;

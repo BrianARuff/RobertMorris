@@ -1,0 +1,39 @@
+<%= form_with(model: speaking, local: true) do |form| %>
+  <% if speaking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(speaking.errors.count, "error") %> prohibited this speaking from being saved:</h2>
+
+      <ul>
+      <% speaking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :speaking_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :speaking_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date, id: :speaking_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time %>
+    <%= form.text_field :time, id: :speaking_time %>
+  </div>
+
+  <%= form.hidden_field :user_id, value: current_user.id %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

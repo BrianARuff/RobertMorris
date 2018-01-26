@@ -1,4 +1,3 @@
-
 @import "_bootstrap-sprockets.scss";
 @import "_bootstrap.scss";
 
@@ -101,9 +100,6 @@ nav a:hover, #main-content > nav > a:hover  {
   font-size: 22px;
   display: block;
   transition: 0.5s;
-}
-
-.side-nav a:hover {
   color: #fff;
 }
 
@@ -113,7 +109,7 @@ nav a:hover, #main-content > nav > a:hover  {
   right: 22px;
   font-size: 36px;
   margin-left: 50px;
-  color: #D1C395;
+  color: #fff;
 }
 
 #main-content {
@@ -239,17 +235,37 @@ body > main > article > section:nth-child(6) > a {
 
  /*about*/
 
- .about-bio {
-  line-height: 2;
-  font-size: 18px;
+ .about-bio p {
+  font-size: 24px;
+  font-weight: normal;
+ }
+
+ .flex-container { 
+  padding: .5vw;
+  font-size: 0;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap; 
+  flex-flow: row wrap; 
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+}
+.flex-box { 
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto; 
+  width: 200px; 
+  margin: .5vw; 
+}
+ .flex-img,
+ .flex-vid { 
+  width: 100%; 
+  height: auto; 
 }
 
- .about-bio img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
- }
+@media screen and (max-width: 768px) {
+  .flex-box { margin: 0; }
+  .flex-container { padding: 0; }
+  
+}

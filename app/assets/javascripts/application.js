@@ -24,3 +24,8 @@ function closeSlideMenu(){
 	document.getElementById('main-content').style.marginLeft = '0';
 	document.getElementById('side-menu').style.width = '0px'
 }
+
+function iframe() {
+	document.getElementById('iframe-img').style.display = 'none';
+	document.getElementById('iframe').style.display = 'flex';
+}

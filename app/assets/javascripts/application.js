@@ -25,7 +25,29 @@ function closeSlideMenu(){
 	document.getElementById('side-menu').style.width = '0px'
 }
 
-function iframe() {
-	document.getElementById('iframe-img').style.display = 'none';
-	document.getElementById('iframe').style.display = 'flex';
-}
+// function iframe() {
+// 	document.getElementById('iframe-img').style.display = 'none';
+// 	document.getElementById('iframe').style.display = 'flex';
+// }
+
+$(document).ready(function(){
+	$('.next').on('click', function(){
+	  var currentImg = $('.active');
+	  var nextImg = currentImg.next();
+  
+	  if(nextImg.length){
+		currentImg.removeClass('active').css('z-index', -10);
+		nextImg.addClass('active').css('z-index', 10);
+	  }
+	});
+  
+	$('.prev').on('click', function(){
+	  var currentImg = $('.active');
+	  var prevImg = currentImg.prev();
+  
+	  if(prevImg.length){
+		currentImg.removeClass('active').css('z-index', -10);
+		prevImg.addClass('active').css('z-index', 10);
+	  }
+	});
+  });

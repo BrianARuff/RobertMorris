@@ -135,6 +135,12 @@ nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  
   height: 500px;
 }
 
+.home img:hover {
+  border: 5px solid #e1d6c4;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
 #main-content > div.home {
   display: flex;
   flex-wrap: wrap;

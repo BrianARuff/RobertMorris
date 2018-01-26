@@ -130,13 +130,30 @@ nav a:hover, #main-content > nav > a:hover  {
 
 /*main home */
 
-.home {
-  margin: 2rem;
+#main-content > div.home {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background: #4A647D;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+iframe {
+  width: 50%;
+  height: 500px;
+}
+
+@media (max-width: 768px) {
+
+#main-content > div.home {
+}
+
+iframe {
+    width: 100%;
+    height: 250px;
+  }
 }
 
 /*  new booksings */

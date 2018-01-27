@@ -1,24 +1,60 @@
-<main>
-  <article class="show-booking">
-    <section class="booking-notice">
-    <small><%= notice %></small>
-    </section>
-    <section class="booking-name">
-      <h1>Name: <%= @booking.name %></h1>
-    </section>
-    <section class="booking-number">
-      <h2>Phone Number: <%= number_to_phone(@booking.number) %></h2>
-    </section>
-    <section class="booking-email">
-      <h3>Email Address: <%= @booking.email %></h3>
-    </section>
-    <section class="booking-message">
-      <h4><%= @booking.message %></h4>
-    </section>
-    <section>
-        <%= link_to 'Edit', edit_booking_path(@booking), class: 'btn btn-warning' %>
-    </section>
-  </article>
-</main>
+ <div class="row">
+   <div class="col-md-6 col-md-offset-3">
+ 
+ <div class="panel panel-primary">
+    <div class="panel-heading text-center">
+      <h1><%= @booking.company.capitalize %></h1>
+    </div>
+    <div class="panel-body">
+      
+        <h3>Name:</h3>
+        <h4><%=@booking.name%></h4>
+      
+        <h3>What is your role in planning this event?</h3>
+        <h4><%= @booking.role %></h4>
+      
+        <h3>Address:</h3>
+        <h4><%= simple_format(@booking.address) %></h4>
 
+        <h3>Email:</h3>
+        <h4><%= @booking.email %></h4>
+
+        <h3>Phone Number:</h3>
+        <h4><%= number_to_phone(@booking.number) %></h4>
+
+        <h3>Preferred Speaking Date:</h3>
+        <h4><%= (@booking.date).strftime('%B %d, %Y') %></h4>
+
+        <h3>Group to be Spoken to:</h3>
+        <h4><%= @booking.group %></h4>
+
+        <h3>What is your budget for speakers at this event?</h3>
+        <h4>
+          <% if number_to_currency(@booking.budget).split('')[0] == '$' %>
+            <%= @booking.budget %>
+          <% else %>
+            <%= number_to_currency(@booking.budget) %>
+          <% end %>
+        </h4>
+
+
+        <h3>Purpose of Meeting:</h3>
+        <h4><%= @booking.purpose %></h4>
+
+        <h3>Event Time:</h3>
+        <h4><%= @booking.time %></h4>
+
+        <h3>Appoximate Number of Attendees:</h3>
+        <h4><%= @booking.attendees %></h4>
+
+        <h3>Any comments or Additional Information?</h3>
+        <h4><%= @booking.additional_info %></h4>
+    </div>
+    <div class="panel-footer text-center">
+      <%= link_to 'Edit', edit_booking_path(@booking), class: 'btn btn-warning btn-block' %>
+      <%= link_to 'Delete', booking_path(@booking), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger btn-block' %>
+    </div>
+  </div>
+</div>
+</div>
 

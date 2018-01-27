@@ -5,13 +5,20 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: url('mic.jpg') no-repeat center;
+  background: #4A647D url('mic.jpg') no-repeat center;
   background-size: cover;
   margin: 2rem;
   padding: 2rem;
   overflow: scroll;
   color: #e1d6c4 !important;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 0rem;
+    padding: 0.3rem;
+  }
 }
 
 #main-content {
@@ -131,8 +138,10 @@ nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  
 /*main home */
 
 .home img {
-  max-width: 100%;
   height: 500px;
+}
+
+@media (max-width: 760px) {
 }
 
 #main-content > div.home {
@@ -143,12 +152,7 @@ nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  
   background: #4A647D;
   margin-top: 2rem;
   width: 100%;
-}
-
-iframe {
-  width: 50%;
-  height: 500px;
-}
+} 
 
 @media (max-width: 768px) {
 
@@ -161,113 +165,7 @@ iframe {
 
 }
 
-/* image slider jquery */
-
-.container{
-	width: 100%;
-	// margin:40px auto;
-  overflow:auto;
-}
-
-.slider-inner{
-	width: 100%;
-	position:relative;
-	overflow:hidden;
-	float:left;
-	padding:3px;
-	border:#666 solid 1px;
-}
-
-.slider-inner img{
-	display:none;
-	width: 500px;
-}
-
-.slider-inner img.active, #main-content > div.home > div > div > div > img.active{
-  display: inline-block;
-  position: relative;
-  left: 37%;
-}
-
-.prev,.next{
-  position: relative;
-  left: 46.5%;
-  cursor: pointer;
-}
-
-#main-content > div.home > div > div > img.next,
-#main-content > div.home > div > div > img.prev {
-  width: 50px;
-  height: 50px;
-  margin: 1rem;
-}
-
-.prev{
-	position:relative;
-	margin-right:-45px;
-	z-index:100;
-}
-
-.next {
-	position:relative;
-	margin-left:-45px;
-	z-index:100;
-}
-
-@media (max-width: 768px) {
-  .container{
-    width: 100%;
-    // margin:40px auto;
-    overflow:auto;
-  }
-  
-  .slider-inner{
-    width: 100%;
-    position:relative;
-    overflow:hidden;
-    float:left;
-    padding:3px;
-    border:#666 solid 1px;
-  }
-  
-  .slider-inner img{
-    display:none;
-    width: 500px;
-  }
-  
-  .slider-inner img.active, #main-content > div.home > div > div > div > img.active{
-    display: inline-block;
-    position: relative;
-    left: 0%;
-  }
-  
-  .prev,.next{
-    position: relative;
-    left: 25%;
-    cursor: pointer;
-  }
-  
-  #main-content > div.home > div > div > img.next,
-  #main-content > div.home > div > div > img.prev {
-    width: 50px;
-    height: 50px;
-    margin: 1rem;
-  }
-  
-  .prev{
-    position:relative;
-    margin-right:-45px;
-    z-index:100;
-  }
-  
-  .next {
-    position:relative;
-    margin-left:-45px;
-    z-index:100;
-  }
-}
-
-/*  new booksings */
+/*  new bookings */
 
 .new-bookings, .edit-bookings, #main-content > div.col-md-6.col-md-offset-3 {
   color: #e1dbc4;
@@ -299,6 +197,19 @@ body > main > div > form > div > label, .sign-in {
   text-align: center;
 }
 
+#booking_date_1i, #booking_date_2i, #booking_date_3i {
+  color: #333;
+  border: 5px;
+  height: 4rem;
+  width: 33%;
+}
+
+@media (max-width: 760px) {
+  #booking_date_1i, #booking_date_2i, #booking_date_3i {
+    width: 32%;
+  }
+}
+
 /* submit button */
 
 body > main > div > form > div.actions > input,
@@ -324,26 +235,20 @@ body > main > div > form > div.actions > input:hover,
 
 /* bookings show page */
 
-.show-booking {
-  text-align: center;
-  border: 1px solid #7f7e7e;
-  color: #D1C395;
+.panel-heading {
+  background: #4A647D !important;
+  border: 3px solid #e4af5a  !important;
 }
 
-.booking-message h4 {
-  font-size: 24px;
+.panel-body, .panel-footer {
+  border: 3px solid #e4af5a !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
 }
 
-/* show edit button */
-body > main > article > section:nth-child(6) > a {
-  background-color: #D1C395;
-  color: #47525f;
-  border: 1px solid #7f7e7e;
-  border-radius: 5px;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  font-weight: bold;
-  font-size: 24px;
+.panel-body h3, h4 {
+  color: #333;
+  line-height: 1.5;
 }
 
 /* bookings index page */
@@ -396,4 +301,20 @@ body > main > article > section:nth-child(6) > a {
   .flex-box { margin: 0; }
   .flex-container { padding: 0; }
   
+}
+
+/* speakings */
+
+#speaking_date_1i, #speaking_date_2i, #speaking_date_3i {
+  color: #333;
+  border: 5px;
+  height: 4rem;
+  width: 33%;
+}
+
+@media (max-width: 760px) {
+  #speaking_date_1i, #speaking_date_2i, #speaking_date_3i {
+    border: 5px;
+    width: 32%;
+  }
 }

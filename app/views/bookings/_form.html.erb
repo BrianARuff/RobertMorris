@@ -12,29 +12,60 @@
       </ul>
     </div>
   <% end %>
-
   <div class="form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :booking_name, placeholder: 'Enter Your Name', autofocus: true, class: 'form-control' %>
+    <%= form.text_field :company, class: 'form-control', placeholder: 'Company/Association *' %>
   </div>
 
   <div class="form-group">
-    <%= form.label 'Phone Number' %>
-    <%= form.text_field :number, id: :booking_number, class: 'form-control', placeholder: 'Enter Your Phone Number' %>
+    <%= form.text_field :name, class: 'form-control', placeholder: 'Name *' %>
   </div>
 
   <div class="form-group">
-    <%= form.label 'Email Address' %>
-    <%= form.text_field :email, id: :booking_email, class: 'form-control', placeholder: 'Enter Your Email Address' %>
+    <%= form.text_area :role, class: 'form-control', placeholder: 'What is your role planning the event?' %>
   </div>
 
   <div class="form-group">
-    <%= form.label 'Your Message' %>
-    <%= form.text_area :message, placeholder: 'Enter Your Message', id: :booking_message, rows: 8, class: 'form-control' %>
+    <%= form.text_area :address, class: 'form-control', placeholder: 'Address *' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.text_field :email, class: 'form-control', placeholder: 'Email *' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.text_field :number, class: 'form-control', placeholder: 'Phone Number *' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label 'Preferred Speaking Date *'%><br>
+    <%= form.date_select :date, style: 'border: 5px;' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.text_field :group, class: 'form-control', placeholder: 'Groups to be Spoken to *'  %>
+  </div>
+
+  <div class="form-group">
+  <%= form.text_field :budget, class: 'form-control', placeholder: 'What is Your Budget for Speakers at this Event?'%>
+  </div>
+
+  <div class="form-group">
+  <%= form.text_area :purpose, class: 'form-control', placeholder: 'Purpose of meeting *'%>
+  </div>
+
+  <div class="form-group">
+  <%= form.text_field :time, class: 'form-control', placeholder: 'Event Time *'%>
+  </div>
+
+  <div class="form-group">
+  <%= form.text_field :attendees, class: 'form-control', placeholder: 'Approximate Number of Attendees *'%>
+  </div>
+
+  <div class="form-group">
+  <%= form.text_area :additional_info, class: 'form-control', placeholder: 'Any Comments or Additional Information?'%>
   </div>
 
   <%= form.hidden_field :user_id, value: current_user.id if current_user %>
-
   <div class="actions">
     <%= form.submit 'Submit', class: 'btn btn-primary btn-block' %>
   </div>

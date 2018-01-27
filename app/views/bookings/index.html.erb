@@ -39,7 +39,7 @@
           <td><%= booking.purpose %></td>
           <td><%= booking.time %></td>
           <td><%= booking.attendees %></td>
-          <td><%= (booking.additional_info).truncate(50) %></td>
+          <td><%= booking.additional_info %></td>
           <td><%= link_to 'Show', booking, class: 'btn btn-primary' %></td>
           <td><%= link_to 'Edit', edit_booking_path(booking), class: 'btn btn-warning' %></td>
           <td><%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>

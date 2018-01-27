@@ -1,4 +1,3 @@
-<% if @bookings? %>
 <main class="bookings-index table-responsive">
   <p id="notice"><%= notice %></p>
 
@@ -28,7 +27,7 @@
     <tbody>
       <% @bookings.each do |booking| %>
         <tr>
-          <td><%= booking.company%></td>
+          <td><%= booking.company %></td>
           <td><%= booking.name %></td>
           <td><%= booking.role %></td>
           <td><%= booking.address %></td>
@@ -43,10 +42,10 @@
           <td><%= booking.additional_info.truncate(50) %></td>
           <td><%= link_to 'Show', booking, class: 'btn btn-primary' %></td>
           <td><%= link_to 'Edit', edit_booking_path(booking), class: 'btn btn-warning' %></td>
-          <td><%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+          <td><%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+          </td>
         </tr>
       <% end %>
     </tbody>
   </table>
 </main>
-<% end %>

@@ -13,26 +13,32 @@
     </div>
   <% end %>
   <div class="form-group">
-    <%= form.text_field :company, class: 'form-control', placeholder: 'Company/Association *' %>
+    <%= form.label 'Company/Association *' %>
+    <%= form.text_field :company, class: 'form-control', placeholder: 'Company/Association *', autofocus: true %>
   </div>
 
   <div class="form-group">
+    <%= form.label 'Name *' %>
     <%= form.text_field :name, class: 'form-control', placeholder: 'Name *' %>
   </div>
 
   <div class="form-group">
+    <%= form.label 'What is your role planning the event?' %>
     <%= form.text_area :role, class: 'form-control', placeholder: 'What is your role planning the event?' %>
   </div>
 
   <div class="form-group">
+    <%= form.label 'Address *' %>
     <%= form.text_area :address, class: 'form-control', placeholder: 'Address *' %>
   </div>
 
   <div class="form-group">
+    <%= form.label 'Email *' %>
     <%= form.text_field :email, class: 'form-control', placeholder: 'Email *' %>
   </div>
 
   <div class="form-group">
+    <%= form.label 'Phone Number' %>
     <%= form.text_field :number, class: 'form-control', placeholder: 'Phone Number *' %>
   </div>
 
@@ -42,26 +48,32 @@
   </div>
 
   <div class="form-group">
+    <%= form.label 'Groups to be spoken to *' %>
     <%= form.text_field :group, class: 'form-control', placeholder: 'Groups to be Spoken to *'  %>
   </div>
 
   <div class="form-group">
+  <%= form.label 'What is your budget for speakers for this event?' %>
   <%= form.text_field :budget, class: 'form-control', placeholder: 'What is Your Budget for Speakers at this Event?'%>
   </div>
 
   <div class="form-group">
+  <%= form.label 'Purpose of meeting? *' %>
   <%= form.text_area :purpose, class: 'form-control', placeholder: 'Purpose of meeting *'%>
   </div>
 
   <div class="form-group">
+  <%= form.label 'Event Time *' %>
   <%= form.text_field :time, class: 'form-control', placeholder: 'Event Time *'%>
   </div>
 
   <div class="form-group">
+  <%= form.label 'Appoximate number of attendees *' %>
   <%= form.text_field :attendees, class: 'form-control', placeholder: 'Approximate Number of Attendees *'%>
   </div>
 
   <div class="form-group">
+  <%= form.label 'Any comments or additional information' %>
   <%= form.text_area :additional_info, class: 'form-control', placeholder: 'Any Comments or Additional Information?'%>
   </div>
 

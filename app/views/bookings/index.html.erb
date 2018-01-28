@@ -2,24 +2,11 @@
   <p id="notice"><%= notice %></p>
 
   <h1 class="text-center">Bookings</h1>
-  <h3 class="text-center">This page will be set to private once it is in production and the link to it will only be viewable by you, Mr. Morris.</h3>
 
   <table class="table table-striped bookings-table">
     <thead>
       <tr>
-        <th>Company</th>
-        <th>Name</th>
-        <th>Role</th>
-        <th>Address</th>
-        <th>Email</th>
-        <th>Phone Number</th>
-        <th>Preferred Date</th>
-        <th>Group</th>
-        <th>Budget</th>
-        <th>Purpose</th>
-        <th>Event time</th>
-        <th>Attendees</th>
-        <th>Comments</th>
+        <th>Company Name or Association</th>
         <th colspan="3">Admin Controls</th>
       </tr>
     </thead>
@@ -27,19 +14,7 @@
     <tbody>
       <% @bookings.each do |booking| %>
         <tr>
-          <td><%= booking.company %></td>
-          <td><%= booking.name %></td>
-          <td><%= booking.role %></td>
-          <td><%= booking.address %></td>
-          <td><%= booking.email %></td>
-          <td><%= number_to_phone(booking.number) %></td>
-          <td><%= booking.date %></td>
-          <td><%= booking.group %></td>
-          <td><%= booking.budget %></td>
-          <td><%= booking.purpose %></td>
-          <td><%= booking.time %></td>
-          <td><%= booking.attendees %></td>
-          <td><%= booking.additional_info %></td>
+          <td><%= link_to booking.company, booking %></td>
           <td><%= link_to 'Show', booking, class: 'btn btn-primary' %></td>
           <td><%= link_to 'Edit', edit_booking_path(booking), class: 'btn btn-warning' %></td>
           <td><%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>

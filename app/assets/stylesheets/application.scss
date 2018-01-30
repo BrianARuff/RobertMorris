@@ -363,3 +363,24 @@ address a:hover {
     width: 32%;
   }
 }
+
+/* videos */
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+iframe {
+  width: 640px;
+  height: 480px;
+}
+
+@media (max-width: 768px) {
+  iframe {
+    max-width: 100%;
+  }
+}

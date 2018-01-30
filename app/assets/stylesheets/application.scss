@@ -224,8 +224,7 @@ body > main > div > form > div > label, .sign-in {
 
 body > main > div > form > div.actions > input,
 #new_user > div.actions > input,
-#main-content > main > div > form > div.actions > input,
- {
+#main-content > main > div > form > div.actions > input {
   background: #e1dbc4;
   color: #635c43;
   font-size: 16px;
@@ -242,6 +241,16 @@ body > main > div > form > div.actions > input:hover,
   border: 1px solid #fff;
 }
 
+#main-content > main > div > div > form > div.actions > input {
+  background: #47525f;
+  margin-bottom: 2rem;
+}
+
+#main-content > main > div > div > form > div.actions > input:hover,
+#main-content > main > div > div > form > div.actions > input:focus {
+  background: #e1d6c4;
+  color: #333;
+}
 
 /* bookings show page */
 

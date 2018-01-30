@@ -27,7 +27,9 @@ body {
   display: flex;
   flex-direction: column;
   background: #4A647D;
-  background: linear-gradient(to right, #4A647D, #3B536A);
+  background: linear-gradient(to right, rgba(74, 100, 125, .99), rgba(59, 83, 106, .99));
+  line-height: 2;
+  border: 1px solid #e4af5a;
 }
 
 /* nav styles */
@@ -48,8 +50,8 @@ nav {
   }
 }
 
-nav li a, #main-content > nav > a {
-  margin-left: 1rem;
+#main-content > nav > a {
+  margin: 2rem 1rem;
   padding: 2rem;
   background-color: #47525F;
   border: 1px solid #7f7e7e;
@@ -70,12 +72,6 @@ nav li a, #main-content > nav > a {
   }
 
 
-}
-
-nav li:nth-of-type(1) a {
-  background: none;
-  border: none;
-  box-shadow: none;
 }
 
 nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  {
@@ -129,6 +125,8 @@ nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  
 .logo {
   list-style: none;
   align-self: center;
+  margin-top: -8rem;
+  margin-bottom: -3rem;
 }
 
 @media (max-width: 768px) {
@@ -158,6 +156,12 @@ nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  
   color: #D1C395 !important;
 }
 
+.home img {
+  border-color: #e4af5a;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
 .home h1 {
   font-weight: bold;
 }
@@ -166,6 +170,7 @@ nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  
   background: #47525F;
   font-weight: bold;
   color: #D1C395;
+  border: 1px solid #e4af5a;
 }
 
 /*  new bookings */

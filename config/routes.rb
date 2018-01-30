@@ -20,5 +20,7 @@ Rails.application.routes.draw do
 
   get 'seminars' => 'static_pages#seminars'
 
+  get 'videos' => 'static_pages#videos'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

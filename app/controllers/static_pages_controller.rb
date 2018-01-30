@@ -10,4 +10,7 @@ class StaticPagesController < ApplicationController
 
   def seminars
   end
+
+  def videos
+  end
 end

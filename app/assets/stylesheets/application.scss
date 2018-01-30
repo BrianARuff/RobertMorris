@@ -393,3 +393,30 @@ iframe {
     max-width: 100%;
   }
 }
+
+/* flex-container-seminars */
+
+.flex-container-seminars {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: center;
+}
+
+.flex-container-seminars .panel {
+  width: 600px;
+  overflow: hidden;
+  background: #333;
+  border: 3px solid #e4af5a;
+  margin: 1rem;
+}
+
+.flex-container-seminars .panel-heading, .flex-container-seminars .panel-body, .flex-container-seminars .panel-footer {
+  border: 3px solid transparent !important;
+}
+
+.flex-container-seminars .panel-heading {
+  border-bottom: 3px solid #e4af5a !important;
+}

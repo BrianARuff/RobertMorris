@@ -18,25 +18,28 @@ body {
     margin: 0rem;
     padding: 0rem;
   }
+  body > div {
+    padding: 2rem;
+  }
 }
 
 #main-content {
+  display: flex;
+  flex-direction: column;
   background: #4A647D;
-  color: #e1d6c4 !important;
+  background: linear-gradient(to right, #4A647D, #3B536A);
 }
 
 /* nav styles */
 
 nav {
-  background: #47525F;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid #7f7e7e;
   list-style: none;
-  overflow: hidden;
-  position: static;
+  position: relative;
+  padding: 4rem 4rem 4rem 4rem;
 }
 
 @media (max-width: 768px) {
@@ -46,17 +49,17 @@ nav {
 }
 
 nav li a, #main-content > nav > a {
-  margin: 0 1rem;
+  margin-left: 1rem;
+  padding: 2rem;
   background-color: #47525F;
-  padding: 7px;
   border: 1px solid #7f7e7e;
   border-radius: 5px;
   text-decoration: none;
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  font-weight: 700;
+  font-weight: bold;
   box-shadow: 5px 10px #1c2838;
-  color: #e1d6c4;
+  color: rgb(190, 175, 122);
 
 }
 
@@ -84,6 +87,7 @@ nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  
   font-weight: bold;
 }
 
+
 /* side slide bar menu */
 
 .side-nav {
@@ -106,7 +110,7 @@ nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  
   font-size: 22px;
   display: block;
   transition: 0.5s;
-  color: #fff;
+  color: #D1C395;
 }
 
 .side-nav .btn-close {
@@ -115,17 +119,31 @@ nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  
   right: 22px;
   font-size: 36px;
   margin-left: 50px;
-  color: #fff;
+  color: #D1C395;
 }
 
 #main-content {
   transition: margin-left 0.5s;
 }
 
+.logo {
+  list-style: none;
+  align-self: center;
+}
+
 @media (max-width: 768px) {
-  .navbar-nav {display: none;}
-  #main-content > nav > li> a{display: none;}
-  #main-content > nav > li.logo > a > img{display: block;}
+  .navbar-nav {
+    display: none;
+  }
+  #main-content > nav > li> a{
+    display: none;
+  }
+  #main-content li img{
+    display: block;
+  }
+  .logo {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -136,20 +154,25 @@ nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  
 
 /*main home */
 
-.home a {
-  background: #47525F;
-  color: #fff;
+.home {
+  color: #D1C395 !important;
+}
+
+.home h1 {
   font-weight: bold;
 }
 
-.home a:hover {
-  font-size: 24px;
+.btn-home-services {
+  background: #47525F;
+  font-weight: bold;
+  color: #D1C395;
 }
 
 /*  new bookings */
 
+
 .new-bookings, .edit-bookings, #main-content > div.col-md-6.col-md-offset-3 {
-  color: #e1dbc4;
+  color: #D1C395;
 }
 
 .new-bookings h1 {
@@ -159,10 +182,11 @@ nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  
 body > main > div > form > div > label, .sign-in {
   font-size: 20px;
   font-weight: lighter;
-  color: #e1d6c4;
+  color: #D1C395 !important;
 }
 
 /* new bookings form background */
+
 #booking_message, 
 #booking_name, 
 #booking_number, 
@@ -171,7 +195,7 @@ body > main > div > form > div > label, .sign-in {
 #user_password,
 #user_password_confirmation,
 #user_current_password
-  {
+{
   background: #e1dbc4 !important;
   font-size: 24px;
   color: #47525f;
@@ -217,19 +241,20 @@ body > main > div > form > div.actions > input:hover,
 /* bookings show page */
 
 .panel-heading {
-  background: #4A647D !important;
+  background: #47525F !important;
   border: 3px solid #e4af5a  !important;
+  color: #e4af5a !important;
 }
 
 .panel-body, .panel-footer {
   border: 3px solid #e4af5a !important;
   border-top: 0 !important;
-  border-bottom: 0 !important;
+  background: #333;
+  // border-bottom: 0 !important;
 }
 
 .panel-body h3, h4 {
-  color: #333;
-  line-height: 1.5;
+  color: #D1C395 !important;
 }
 
 /* bookings index page */
@@ -248,6 +273,14 @@ body > main > div > form > div.actions > input:hover,
  }
 
  /*about*/
+
+ .about-bio {
+   color: #D1C395 !important;
+ }
+
+ .about-bio h2 {
+   font-weight: bold;
+ }
 
  .about-bio p {
   font-size: 24px;
@@ -284,7 +317,18 @@ body > main > div > form > div.actions > input:hover,
   
 }
 
-address h4 {
+address {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+address h3 {
+  color: #D1C395;
+  font-weight: bold;
+}
+
+address h2, h4 {
   color: #D1C395;
 }
 

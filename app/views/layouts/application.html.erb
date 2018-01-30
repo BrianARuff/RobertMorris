@@ -12,71 +12,43 @@
   </head>
   <body>
     <div id="main-content">
-      <nav>
+      <nav style="border: none;">
         <span class="open-slide">
             <a href="#" onclick="openSlideMenu()">
               <svg width="30" height="30">
-                <path d="M0,5 30,5" stroke="#fff" stroke-width="5" />
-                <path d="M0,14 30,14" stroke="#fff" stroke-width="5" />
-                <path d="M0,23 30,23" stroke="#fff" stroke-width="5" />
+                <path d="M0, 5  30,  5"   stroke="#D1C395" stroke-width="5" />
+                <path d="M0, 14 30, 14" stroke="#D1C395" stroke-width="5" />
+                <path d="M0, 23 30, 23" stroke="#D1C395" stroke-width="5" />
               </svg>
             </a>
-          </span>
-          
-          <li class="logo">
-              <a href="<%= home_path %>"><%= image_tag 'morrislogo2.png' %></a>
-          </li>
-          
-          <li>
-            <a href="<%= home_path %>">Home</a>
-          </li>
+        </span>
 
-          <li>
-            <a href="<%= about_path %>">About Robert & Services</a>
-          </li>
-
-          <li>
-              <a href="<%= contact_path %>">Contact us</a>
-          </li>
-          
-          <li>
-            <a href="<%= speakings_path %>">Events</a>
-          </li>
-
-          <li>
-            <a href="<%= new_booking_path %>">Book Robert</a>            
-          </li>
-
-          <li>
-            <a href="#">What People Are Saying</a>
-          </li>
-
-          <% if user_signed_in? %>
-          
-          <li>
-            <a href="<%= bookings_path %>">View Booking Requests</a>
-          </li>
-          
-          <li>
-            <a href="<%= new_speaking_path %>">Create Event</a>
-          </li>
-          
-          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, data: {confirm: 'Are you sure?'} %>
-          
-          <% else %>
-          
-          <li>
-            <a href="<%= new_user_session_path %>">Sign In</a>
-          </li>
-        
-        <% end %>
+          <a href="<%= home_path %>">Home</a>
+          <a href="<%= about_path %>">About Robert</a>
+          <a href="<%= contact_path %>">Contact us</a>
+          <a href="<%= %>">Robert in Action</a>
+          <a href="#">Seminar & Course Offerings</a>
+        <a href="<%= speakings_path %>">Events</a>
+        <a href="<%= new_booking_path %>">Book Robert</a>
+        <a href="#">What People Are Saying</a>
+        <% if user_signed_in? %>
+          <a href="<%= bookings_path %>">View Booking Requests</a>
+          <a href="<%= new_speaking_path %>">Create Event</a>  
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, data: {confirm: 'Are you sure?'} %> 
+        <% else %>
+          <a href="<%= new_user_session_path %>">Sign In</a>
+      <% end %>
       </nav>
+      <li class="logo"><a href="<%= home_path %>"><%= image_tag 'morrislogo2.png' %></a></li>
+
       <div id="side-menu" class="side-nav">
         <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
         <a href="<%= home_path %>">Home</a>
         <a href="<%= about_path %>">About Robert</a>
         <a href="<%= new_booking_path %>">Book Robert</a>
         <a href="<%= contact_path %>">Contact Us</a>
+        <a href="#">Seminar & Course Offerings</a>
+        <a href="#">Robert In Action</a>
         <a href="#">What People Are Saying</a>
         <% if user_signed_in? %>
           <a href="<%= bookings_path %>">View Booking Requests</a>

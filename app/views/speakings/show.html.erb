@@ -1,24 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @speaking.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @speaking.description %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @speaking.date %>
-</p>
-
-<p>
-  <strong>Time:</strong>
-  <%= @speaking.time %>
-</p>
-
-<%= link_to 'Edit', edit_speaking_path(@speaking) %> |
-<%= link_to 'Back', speakings_path %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-primary text-center">
+      <div class="panel-heading">
+        <h1><%= @speaking.name %></h1>
+      </div>
+      <div class="panel-body">
+        <h4><%= @speaking.description %></h4>
+      </div>
+      <div class="panel-footer">
+        <h3>Date: <%= @speaking.speaking_date %></h3>
+        <h3>Time: <%= @speaking.time %></h3>
+      </div>
+    </div>
+  </div>
+</div>

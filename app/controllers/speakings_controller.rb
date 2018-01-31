@@ -69,6 +69,6 @@ class SpeakingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def speaking_params
-      params.require(:speaking).permit(:name, :description, :date, :time, :user_id)
+      params.require(:speaking).permit(:name, :description, :date, :time, :speaking_date, :user_id)
     end
 end

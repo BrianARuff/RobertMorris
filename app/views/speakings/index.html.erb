@@ -1,27 +1,30 @@
-<main class="table-responsive">
-  <h1 class="text-center">Speakings</h1>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Date</th>
-        <th>Time</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-    <tbody style="color: #333;">
-      <% @speakings.each do |speaking| %>
-        <tr>
-          <td><%= speaking.name %></td>
-          <td><%= speaking.description %></td>
-          <td><%= speaking.date %></td>
-          <td><%= speaking.time %></td>
-          <td><%= link_to 'Show', speaking %></td>
-          <td><%= link_to 'Edit', edit_speaking_path(speaking) %></td>
-          <td><%= link_to 'Destroy', speaking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</main>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <main class="table-responsive">
+      <h1 class="text-center">Speakings</h1>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+        <tbody style="color: #333;">
+          <% @speakings.each do |speaking| %>
+            <tr>
+              <td><%= link_to speaking.name, speaking %></td>
+              <td><%= speaking.speaking_date %></td>
+               <td><%= speaking.time %></td>
+              <td><%= link_to 'Show', speaking, class: 'btn btn-primary' %></td>
+              <td><%= link_to 'Edit', edit_speaking_path(speaking), class: 'btn btn-warning' %></td>
+              <td><%= link_to 'Delete', speaking, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </main>
+  </div>
+</div>

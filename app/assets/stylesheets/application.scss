@@ -1,6 +1,11 @@
 @import "_bootstrap-sprockets.scss";
 @import "_bootstrap.scss";
 
+/*
+ *= require jquery-ui/datepicker
+ */
+
+
 /* base styles */
 
 body {
@@ -11,6 +16,7 @@ body {
   padding: 0 20rem;
   color: #e1d6c4 !important;
   font-weight: bold;
+  line-height: 2 !important;
 }
 
 @media (max-width: 768px) {
@@ -40,8 +46,14 @@ nav {
   align-items: center;
   justify-content: center;
   list-style: none;
-  position: relative;
   padding: 4rem 4rem 4rem 4rem;
+  background: #1c2838;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0px;
+  bottom: 100%;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -52,17 +64,17 @@ nav {
 
 #main-content > nav > a {
   margin: 2rem 1rem;
-  padding: 1.8rem;
+  padding: .5rem 1.8rem;
   background-color: #47525F;
   border: 1px solid #7f7e7e;
   border-radius: 5px;
   text-decoration: none;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  box-shadow: 5px 10px #1c2838;
+  box-shadow: 5px 5px #1c2838;
   color: rgb(190, 175, 122);
-
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
 }
 
 @media screen and (max-width: 768px){
@@ -136,12 +148,6 @@ nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  
   #main-content > nav > li> a{
     display: none;
   }
-  #main-content li img{
-    display: block;
-  }
-  .logo {
-    display: none;
-  }
 }
 
 @media (min-width: 768px) {
@@ -166,11 +172,17 @@ nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  
   font-weight: bold;
 }
 
-.btn-home-services {
+.btn-home-services,
+#main-content > div.row > div > form > div.actions > input {
   background: #47525F;
   font-weight: bold;
   color: #D1C395;
   border: 1px solid #e4af5a;
+}
+
+.form-control {
+  border: 1px solid #e4af5a !important;
+  background: #d1d1d1;
 }
 
 /*  new bookings */
@@ -269,6 +281,8 @@ body > main > div > form > div.actions > input:hover,
 
 .panel-body h3, h4 {
   color: #D1C395 !important;
+  text-align: left;
+  line-height: 2;
 }
 
 /* bookings index page */
@@ -277,9 +291,27 @@ body > main > div > form > div.actions > input:hover,
   font-weight: bold !important;
  }
 
- .bookings-index table {
-  color: #e1d6c4;
+ .bookings-table {
+   background: #333;
+ }
+
+ .bookings-table a {
+  color: rgba($color: #333, $alpha: 1);
   font-size: 24px;
+ }
+
+ #main-content main th {
+   font-size: 24px;
+ }
+
+ .btn-primary {
+   background: #4A647D;
+ }
+
+ .btn-primary:hover {
+   background: #e1dbc4 !important;
+   color: #333 !important;
+   margin-bottom: 2rem !important;
  }
 
  .bookings-index tbody {
@@ -373,6 +405,10 @@ address a:hover {
   }
 }
 
+textarea {
+  resize: none;
+}
+
 /* videos */
 
 .flex-container {
@@ -392,6 +428,10 @@ iframe {
   iframe {
     max-width: 100%;
   }
+}
+
+td a {
+  color: #333;
 }
 
 /* flex-container-seminars */
@@ -419,4 +459,42 @@ iframe {
 
 .flex-container-seminars .panel-heading {
   border-bottom: 3px solid #e4af5a !important;
+}
+
+.panel-footer {
+  color: #D1C395;
+}
+
+/* calendar */
+
+#ui-datepicker-div {
+  background: #47525f !important;
+  color: #D1C395;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  text-align: center;
+  border: 1px solid #e4af5a;
+  cursor: pointer;
+}
+
+#ui-datepicker-div a {
+  color: #e4af5a;
+}
+
+#ui-datepicker-div span {
+  margin: 2rem;
+}
+
+@media (max-width: 768px) {
+  #ui-datepicker-div {
+    width: 350px;
+    font-size: 12px;
+  }
+  #ui-datepicker-div span {
+    margin: 1.6rem;
+  }
 }

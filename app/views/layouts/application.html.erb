@@ -9,6 +9,7 @@
         'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900" rel="stylesheet">
   </head>
   <body>
     <div id="main-content">
@@ -24,12 +25,12 @@
         </span>
           <a href="<%= home_path %>">Home</a>
           <a href="<%= about_path %>">About Robert</a>
-          <a href="<%= contact_path %>">Contact us</a>
-          <a href="<%= videos_path %>">Robert in Action</a>
           <a href="<%= seminars_path %>">Seminar & Course Offerings</a>
-        <a href="<%= speakings_path %>">Events</a>
-        <a href="<%= new_booking_path %>">Book Robert</a>
-        <a href="#">What People Are Saying</a>
+          <a href="<%= speakings_path %>">Events</a>
+          <a href="<%= new_booking_path %>">Book Robert</a>
+          <a href="<%= videos_path %>">Robert in Action</a>
+          <a href="#">What People Are Saying</a>
+          <a href="<%= contact_path %>">Contact us</a>
         <% if user_signed_in? %>
           <a href="<%= bookings_path %>">View Booking Requests</a>
           <a href="<%= new_speaking_path %>">Create Event</a>  
@@ -46,10 +47,10 @@
         <a href="<%= home_path %>">Home</a>
         <a href="<%= about_path %>">About Robert</a>
         <a href="<%= new_booking_path %>">Book Robert</a>
-        <a href="<%= contact_path %>">Contact Us</a>
         <a href="<%= seminars_path %>">Seminar & Course Offerings</a>
         <a href="<%= videos_path %>">Robert In Action</a>
         <a href="#">What People Are Saying</a>
+        <a href="<%= contact_path %>">Contact Us</a>
         <% if user_signed_in? %>
           <a href="<%= bookings_path %>">View Booking Requests</a>
           <a href="<%= new_speaking_path %>">Create Event</a>

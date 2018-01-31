@@ -12,9 +12,11 @@
 //
 //= require rails-ujs
 //= require jquery
+//= require jquery-ui/widgets/datepicker
 //= require bootstrap-sprockets
 //= require_tree .
 
+//slide menu
 function openSlideMenu() {
 	document.getElementById('main-content').style.marginLeft = '250px';
 	document.getElementById('side-menu').style.width = '250px';
@@ -25,29 +27,31 @@ function closeSlideMenu(){
 	document.getElementById('side-menu').style.width = '0px'
 }
 
-// function iframe() {
-// 	document.getElementById('iframe-img').style.display = 'none';
-// 	document.getElementById('iframe').style.display = 'flex';
-// }
+// image slider
+// $(document).ready(function(){
+// 	$('.next').on('click', function(){
+// 	  var currentImg = $('.active');
+// 	  var nextImg = currentImg.next();
+  
+// 	  if(nextImg.length){
+// 		currentImg.removeClass('active').css('z-index', -10);
+// 		nextImg.addClass('active').css('z-index', 10);
+// 	  }
+// 	});
+  
+// 	$('.prev').on('click', function(){
+// 	  var currentImg = $('.active');
+// 	  var prevImg = currentImg.prev();
+  
+// 	  if(prevImg.length){
+// 		currentImg.removeClass('active').css('z-index', -10);
+// 		prevImg.addClass('active').css('z-index', 10);
+// 	  }
+// 	});
+// 	});
 
-$(document).ready(function(){
-	$('.next').on('click', function(){
-	  var currentImg = $('.active');
-	  var nextImg = currentImg.next();
-  
-	  if(nextImg.length){
-		currentImg.removeClass('active').css('z-index', -10);
-		nextImg.addClass('active').css('z-index', 10);
-	  }
+/* date-picker */
+
+$(function() {
+	$( "#date" ).datepicker();
 	});
-  
-	$('.prev').on('click', function(){
-	  var currentImg = $('.active');
-	  var prevImg = currentImg.prev();
-  
-	  if(prevImg.length){
-		currentImg.removeClass('active').css('z-index', -10);
-		prevImg.addClass('active').css('z-index', 10);
-	  }
-	});
-  });

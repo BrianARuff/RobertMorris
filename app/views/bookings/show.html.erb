@@ -23,7 +23,7 @@
         <h4><%= number_to_phone(@booking.number) %></h4>
 
         <h3>Preferred Speaking Date:</h3>
-        <h4><%= (@booking.date).strftime('%B %d, %Y') %></h4>
+        <h4><%= @booking.booking_date %></h4>
 
         <h3>Group to be Spoken to:</h3>
         <h4><%= @booking.group %></h4>

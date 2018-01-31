@@ -1,26 +1,32 @@
-<main class="bookings-index table-responsive">
-  <p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <main class="bookings-index table-responsive">
+      <p id="notice"><%= notice %></p>
+      <h1 class="text-center">Bookings</h1>
+      <table class="table table-striped bookings-table">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th colspan="3">Administrator Controls</th>
+          </tr>
+        </thead>
 
-  <h1 class="text-center">Bookings</h1>
-
-  <table class="table table-striped bookings-table">
-    <thead>
-      <tr>
-        <th>Company Name or Association</th>
-        <th colspan="3">Admin Controls</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @bookings.each do |booking| %>
-        <tr>
-          <td><%= link_to booking.company, booking %></td>
-          <td><%= link_to 'Show', booking, class: 'btn btn-primary' %></td>
-          <td><%= link_to 'Edit', edit_booking_path(booking), class: 'btn btn-warning' %></td>
-          <td><%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</main>
+        <tbody>
+          <% @bookings.each do |booking| %>
+            <tr>
+              <td><%= link_to booking.company, booking %></td>
+              <td><%= booking.booking_date.to_date.strftime('%B %d, %Y') %></td>
+              <td><%= booking.time %></td>
+              <td><%= link_to 'Show', booking, class: 'btn btn-primary' %></td>
+              <td><%= link_to 'Edit', edit_booking_path(booking), class: 'btn btn-warning' %></td>
+              <td><%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </main>
+  </div>
+</div>

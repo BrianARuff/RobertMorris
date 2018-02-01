@@ -47,13 +47,8 @@ nav {
   justify-content: center;
   list-style: none;
   padding: 4rem 4rem 4rem 4rem;
-  background: #1c2838;
+  background: linear-gradient(to right, rgba(74, 100, 125, .99), rgba(59, 83, 106, .99));
   width: 100%;
-  position: fixed;
-  top: 0;
-  right: 0px;
-  bottom: 100%;
-  z-index: 1;
 }
 
 @media (max-width: 768px) {

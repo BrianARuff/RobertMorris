@@ -23,6 +23,28 @@
   margin: 0.5rem;
 }
 
+.google-calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+#main-content > main > iframe {
+  // margin: 2rem !important;
+  padding: 0 15rem 0 15rem;
+  width: 100%;
+  height: 1080px;
+}
+
+@media (max-width: 1080px) {
+  #main-content > main > iframe {
+    padding: 0;
+    max-width: 400px;
+    height: 400px;
+  }
+}
 
 /* base styles */
 

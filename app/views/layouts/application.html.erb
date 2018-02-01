@@ -34,7 +34,6 @@
           <a href="<%= contact_path %>">Contact us</a>
         <% if user_signed_in? %>
           <a href="<%= bookings_path %>">View Booking Requests</a>
-          <a href="<%= new_speaking_path %>">Create Event</a>  
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete, data: {confirm: 'Are you sure?'} %> 
         <% else %>
           <a href="<%= new_user_session_path %>">Sign In</a>
@@ -54,7 +53,6 @@
         <a href="<%= contact_path %>">Contact Us</a>
         <% if user_signed_in? %>
           <a href="<%= bookings_path %>">View Booking Requests</a>
-          <a href="<%= new_speaking_path %>">Create Event</a>
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete, data: {confirm: 'Are you sure?'} %>
         <% else %>
           <a href="<%= new_user_session_path %>">Sign In</a>

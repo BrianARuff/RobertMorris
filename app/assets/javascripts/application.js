@@ -3,8 +3,6 @@
 //= require turbolinks
 //= require jquery
 //= require jquery-ui/widgets/datepicker
-//= require moment 
-//= require fullcalendar
 //= require bootstrap-sprockets
 //= require_tree .
 
@@ -25,12 +23,3 @@ function closeSlideMenu(){
 $(function() {
 	$( "#date" ).datepicker();
 	});
-
-// full-calendar (speakings index view), located in speakings/index.html.erb
-var initialize_calendar;
-initialize_calendar = function() {
-	$('.calendar').each(function() {
-
-	})
-};
-$(document).on('turbolinks:load', initialize_calendar);

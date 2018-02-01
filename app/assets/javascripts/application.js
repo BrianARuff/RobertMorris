@@ -1,5 +1,6 @@
 
 //= require rails-ujs
+//= require turbolinks
 //= require jquery
 //= require jquery-ui/widgets/datepicker
 //= require moment 
@@ -26,4 +27,10 @@ $(function() {
 	});
 
 // full-calendar (speakings index view), located in speakings/index.html.erb
-	$('#calendar').fullCalendar({});
+var initialize_calendar;
+initialize_calendar = function() {
+	$('.calendar').each(function() {
+
+	})
+};
+$(document).on('turbolinks:load', initialize_calendar);

@@ -1,57 +1,29 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, or any plugin's
-// vendor/assets/javascripts directory can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file. JavaScript code in this file should be added after the last require_* statement.
-//
-// Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
-// about supported directives.
-//
+
 //= require rails-ujs
 //= require jquery
 //= require jquery-ui/widgets/datepicker
+//= require moment 
+//= require fullcalendar
 //= require bootstrap-sprockets
 //= require_tree .
 
-//slide menu
+
+//open slide menu (mobile view only), located in application.html.erb
 function openSlideMenu() {
 	document.getElementById('main-content').style.marginLeft = '250px';
 	document.getElementById('side-menu').style.width = '250px';
 }
 
+//close side menu (mobile view only), located in application.html.erb
 function closeSlideMenu(){
 	document.getElementById('main-content').style.marginLeft = '0';
-	document.getElementById('side-menu').style.width = '0px'
+	document.getElementById('side-menu').style.width = '0px';
 }
 
-// image slider
-// $(document).ready(function(){
-// 	$('.next').on('click', function(){
-// 	  var currentImg = $('.active');
-// 	  var nextImg = currentImg.next();
-  
-// 	  if(nextImg.length){
-// 		currentImg.removeClass('active').css('z-index', -10);
-// 		nextImg.addClass('active').css('z-index', 10);
-// 	  }
-// 	});
-  
-// 	$('.prev').on('click', function(){
-// 	  var currentImg = $('.active');
-// 	  var prevImg = currentImg.prev();
-  
-// 	  if(prevImg.length){
-// 		currentImg.removeClass('active').css('z-index', -10);
-// 		prevImg.addClass('active').css('z-index', 10);
-// 	  }
-// 	});
-// 	});
-
-/* date-picker */
-
+// date-picker, located in speakings/_form.html.erb, bookings/_form.html.erb
 $(function() {
 	$( "#date" ).datepicker();
 	});
+
+// full-calendar (speakings index view), located in speakings/index.html.erb
+	$('#calendar').fullCalendar({});

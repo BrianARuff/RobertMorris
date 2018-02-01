@@ -8,14 +8,25 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track':
         'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900" rel="stylesheet">
+
+    <!-- Full calendar -->
+    <script>
+      $(document).ready(function() {
+      // page is now ready, initialize the calendar...
+        $('#calendar').fullCalendar({
+        // put your options and callbacks here
+        })
+      });
+    </script>
   </head>
   <body>
     <div id="main-content">
       <nav style="border: none;">
         <span class="open-slide">
-            <a href="#" onclick="openSlideMenu()">
+            <a href="#" onclick="openSlideMenu()" data-turbolinks="false" id="slideOpen">
               <svg width="30" height="30">
                 <path d="M0, 5  30,  5"   stroke="#D1C395" stroke-width="5" />
                 <path d="M0, 14 30, 14" stroke="#D1C395" stroke-width="5" />
@@ -43,7 +54,7 @@
       <li class="logo"><a href="<%= home_path %>"><%= image_tag 'morrislogo2.png' %></a></li>
 
       <div id="side-menu" class="side-nav">
-        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="#" class="btn-close" onclick="closeSlideMenu()" data-turbolinks="false">&times;</a>
         <a href="<%= home_path %>">Home</a>
         <a href="<%= about_path %>">About Robert</a>
         <a href="<%= new_booking_path %>">Book Robert</a>

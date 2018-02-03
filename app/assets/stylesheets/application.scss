@@ -589,3 +589,24 @@ td a {
     margin: 1.6rem;
   }
 }
+
+/* rebac section */
+
+.REBAC-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin: 0 1rem;
+}
+
+.REBAC-container .panel {
+  background: none;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .REBAC-container {
+    grid-template-columns: 1fr;
+  }
+}
+

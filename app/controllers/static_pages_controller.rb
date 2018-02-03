@@ -16,4 +16,16 @@ class StaticPagesController < ApplicationController
 
   def REBAC
   end
+
+  def rebi
+  end
+
+  def CE
+  end
+
+  def keynote
+  end
+
+  def wcr
+  end
 end

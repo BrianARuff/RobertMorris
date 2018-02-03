@@ -13,6 +13,10 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   get 'rebac' => 'static_pages#rebac'
+  get 'rebi' => 'static_pages#rebi'
+  get 'wcr' => 'static_pages#wcr'
+  get 'ce' => 'static_pages#ce'
+  get 'keynote' => 'static_pages#keynote'
 
   get 'home' => 'static_pages#home'
 

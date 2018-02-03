@@ -128,6 +128,11 @@ nav {
   margin: 0 !important;
 }
 
+#main-content > nav > a:nth-child(12):hover {
+  background: none;
+  border: none;
+}
+
 nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  {
   color: #fefefe;
   background: #606A77;
@@ -196,7 +201,11 @@ nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  
 /*main home */
 
 .home {
-  color: #D1C395 !important;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 .home img {
@@ -206,7 +215,7 @@ nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  
   max-width: 100%;
   height: 400px;
   margin: 0 0 2rem 0;
-  box-shadow: 5px 5px 100px 25px #333;
+  box-shadow: 5px 5px 100px 5px #333;
 }
 
 @media (max-width: 768px) {
@@ -219,18 +228,46 @@ nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  
   font-weight: bold;
 }
 
-.btn-home-services,
-#main-content > div.row > div > form > div.actions > input {
-  background: #47525F;
-  font-weight: bold;
-  color: #D1C395;
-  border: 1px solid #e4af5a;
-}
-
 .form-control {
   border: 1px solid #e4af5a !important;
   background: #d1d1d1;
 }
+
+aside {
+  text-align: left;
+  margin-left: -12rem;
+}
+
+aside h3 {
+  color: #D1C395;
+  font-weight: bold;
+}
+aside ul li {
+  display: inline-block;
+  background: #47525f;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 5px 5px 5px #333;
+}
+
+.readings a {
+  color: #D1C395;
+}
+
+@media (max-width: 768px) {
+  aside {
+    text-align: center;
+  }
+
+  #main-content > div.row > div > aside > ul > li:nth-child(6) > a {
+    color: rgb(212, 208, 193);
+  }
+  aside ul li {
+    display: block;
+    margin: 1rem;
+  }
+}
+
 
 /*  new bookings */
 

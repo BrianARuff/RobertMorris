@@ -1,6 +1,5 @@
 
 //= require rails-ujs
-//= require turbolinks
 //= require jquery
 //= require jquery-ui/widgets/datepicker
 //= require bootstrap-sprockets
@@ -22,4 +21,4 @@ function closeSlideMenu(){
 // date-picker, located in speakings/_form.html.erb, bookings/_form.html.erb
 $(function() {
 	$( "#date" ).datepicker();
-	});
+});

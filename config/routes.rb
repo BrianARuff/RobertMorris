@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   
   root 'static_pages#home'
 
+  get 'rebac' => 'static_pages#rebac'
+
   get 'home' => 'static_pages#home'
 
   get 'about' => 'static_pages#about'

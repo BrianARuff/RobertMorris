@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900" rel="stylesheet">
   </head>
   <body>
-    <div id="main-content">
+      <div id="main-content">
       <nav style="border: none;">
         <span class="open-slide">
             <a href="#" onclick="openSlideMenu()" data-turbolinks="false" id="slideOpen">
@@ -24,24 +24,32 @@
               </svg>
             </a>
         </span>
-          <a href="<%= home_path %>">Home</a>
-          <a href="<%= about_path %>">About Robert</a>
-          <a href="<%= seminars_path %>">Seminar & Course Offerings</a>
-          <a href="<%= speakings_path %>">Events</a>
-          <a href="<%= new_booking_path %>">Book Robert</a>
-          <a href="<%= videos_path %>">Robert in Action</a>
-          <a href="#">What People Are Saying</a>
-          <a href="<%= contact_path %>">Contact us</a>
+          <li><a href="<%= home_path %>">Home</a></li>
+          <li><a href="<%= about_path %>">About Robert</a></li>
+          <li><a class="text-center" id='drop-down' href="#">Seminar & Course Offerings &#709;
+          </a>
+            <ul id="dropdown-menu">
+              <li><a href="https:www.facebook.com">REBAC</a></li>
+              <li><a href="https:www.chess.com">Chess</a></li>
+              <li><a href="https:www.chess.com">Chess</a></li>
+              <li><a href="https:www.chess.com">Chess</a></li>
+              <li><a href="https:www.chess.com">Chess</a></li>
+            </ul>
+          </li>
+          <li><a href="<%= speakings_path %>">Events</a></li>
+          <li><a href="<%= new_booking_path %>">Book Robert</a></li>
+          <li><a href="<%= videos_path %>">Robert in Action</a></li>
+          <li><a href="#">What People Are Saying</a></li>
+          <li><a href="<%= contact_path %>">Contact us</a></li>
         <% if user_signed_in? %>
-          <a href="<%= bookings_path %>">View Booking Requests</a>
+          <li><a href="<%= bookings_path %>">View Booking Requests</a></li>
+          <li><a href='<%= destroy_user_session_path %>' data-method='delete' rel='nofollow'>Sign Out</a><li>
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete, data: {confirm: 'Are you sure?'} %> 
         <% else %>
-          <a href="<%= new_user_session_path %>">Sign In</a>
+          <li><a href="<%= new_user_session_path %>">Sign In</a></li>
       <% end %>
       </nav>
-            <%= link_to (image_tag 'morrislogo2.png'), home_path%>
-  
-      
+      <%= link_to (image_tag 'morrislogo2.png'), home_path%>
       <div id="side-menu" class="side-nav">
         <a href="#" class="btn-close" onclick="closeSlideMenu()" data-turbolinks="false">&times;</a>
         <a href="<%= home_path %>">Home</a>
@@ -60,5 +68,10 @@
       </div>
   <%= yield %>
     </div>
+    <script>
+      document.getElementById("drop-down").addEventListener('click', function() {
+	      document.getElementById('dropdown-menu').classList.toggle('events-active');
+      });
+    </script>
   </body>
 </html>

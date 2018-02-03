@@ -13,4 +13,7 @@ class StaticPagesController < ApplicationController
 
   def videos
   end
+
+  def REBAC
+  end
 end

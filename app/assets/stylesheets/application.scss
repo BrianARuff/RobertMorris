@@ -133,6 +133,33 @@ nav {
   border: none;
 }
 
+#main-content > a {
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+
+  #main-content > a > img {
+    display: none;
+  }
+
+  aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    position: relative;
+    left: 10.5rem;
+    overflow-x: hidden;
+  }
+
+  #main-content > div.row.home > div > aside > ul > li {
+    margin: 1rem;
+    max-width: 80%;
+  }
+}
+
 nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  {
   color: #fefefe;
   background: #606A77;

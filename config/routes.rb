@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :load_images
   resources :speakings
   resources :bookings
   devise_for :users
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
   get 'rebac' => 'static_pages#rebac'
   get 'rebi' => 'static_pages#rebi'
   get 'wcr' => 'static_pages#wcr'
-  get 'ce' => 'static_pages#ce'
+  get 'continuing-ed' => 'static_pages#ce'
   get 'keynote' => 'static_pages#keynote'
 
   get 'home' => 'static_pages#home'

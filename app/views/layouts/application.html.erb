@@ -54,7 +54,15 @@
         <a href="<%= home_path %>">Home</a>
         <a href="<%= about_path %>">About Robert</a>
         <a href="<%= new_booking_path %>">Book Robert</a>
-        <a href="<%= seminars_path %>">Seminar & Course Offerings</a>
+        <li><a id='drop-down-2' href='#' >Seminars &#709;</a>
+         <ul id="dropdown-menu-2">
+            <li><a href="/ce">Advanced Training CE (Tennessee)</a></li>
+            <li><a href="/wcr">Women's Council (PMN)</a></li>
+            <li><a href="/keynote">Keynote Speakings</a></li>
+            <li><a href='/rebac'>REBAC</a></li>
+            <li><a href="/rebi">rebi</a></li>
+          </ul>
+        <li>
         <a href="<%= videos_path %>">Robert In Action</a>
         <a href="#">What People Are Saying</a>
         <a href="<%= contact_path %>">Contact Us</a>
@@ -70,6 +78,12 @@
     <script>
       document.getElementById("drop-down").addEventListener('click', function() {
 	      document.getElementById('dropdown-menu').classList.toggle('events-active');
+      });
+    </script>
+    
+    <script>
+      document.getElementById('drop-down-2').addEventListener('click', function() {
+        document.getElementById('dropdown-menu-2').classList.toggle('events-active-2');
       });
     </script>
   </body>

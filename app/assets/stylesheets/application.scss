@@ -610,3 +610,28 @@ td a {
   }
 }
 
+/* mobile nav dropdown menu */
+
+@media (max-width: 768px) {
+  #side-menu > li {
+    list-style: none;
+  }
+
+  #dropdown-menu-2 {
+    display: none;
+  }
+
+  .events-active-2 {
+    display: block !important;
+    animation: fadein 3s;
+  }
+  
+  @keyframes fadein {
+    from{opacity: 0;}
+    to{opacity: 1;}
+  }
+
+  .events-active-2 li {
+    list-style: none;
+  }
+}

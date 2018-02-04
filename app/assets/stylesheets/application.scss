@@ -61,6 +61,12 @@ body {
 
 @media (max-width: 768px) {
   body {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
     margin: 0rem;
     padding: 0rem;
   }
@@ -350,6 +356,11 @@ body > main > div > form > div.actions > input:hover,
 
 /* bookings show page */
 
+.panel li a {
+  color: #D1C395;
+  text-decoration: underline;
+}
+
 .panel-heading {
   background: #47525F !important;
   border: 3px solid #e4af5a  !important;
@@ -380,7 +391,7 @@ body > main > div > form > div.actions > input:hover,
  }
 
  .bookings-table a {
-  color: rgba($color: #333, $alpha: 1);
+  color: #D1C395;
   font-size: 24px;
  }
 
@@ -561,19 +572,19 @@ td a {
 #ui-datepicker-div {
   background: #47525f !important;
   color: #D1C395;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 36px;
+  width: 550px;
+  z-index: 1;
   text-align: center;
   border: 1px solid #e4af5a;
   cursor: pointer;
 }
 
+#ui-datepicker-div > table > tbody > tr:nth-child(4) > td {
+  font-size: 10px;
+}
+
 #ui-datepicker-div a {
-  color: #e4af5a;
+  color: #333;
 }
 
 #ui-datepicker-div span {

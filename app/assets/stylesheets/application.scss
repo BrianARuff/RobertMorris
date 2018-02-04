@@ -653,16 +653,3 @@ td a {
   background: none;
   color: #D1C395;
 }
-
-/* loaded images grid */
-.grid {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.grid img {
-  max-width: 100%;
-}

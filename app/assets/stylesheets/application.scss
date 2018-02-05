@@ -38,6 +38,10 @@
   height: 1080px;
 }
 
+#main-content {
+  width: 75%;
+}
+
 @media (max-width: 100%) {
   #main-content > main > iframe {
     padding: 0;
@@ -407,9 +411,11 @@ body > main > div > form > div.actions > input:hover,
 
  .btn-primary {
    background: #4A647D;
+   border: 1px solid #D1C395;
+   margin: 1rem;
  }
 
- .btn-primary:hover {
+ .btn-primary:hover, .btn-primary:focus {
    background: #e1dbc4 !important;
    color: #333 !important;
    margin-bottom: 2rem !important;

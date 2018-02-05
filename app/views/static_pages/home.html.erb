@@ -1,12 +1,49 @@
 <section class="home-section-a text-center">
 	
-	<article>	
-		<h1>Quote of the Day</h1>
-		<h3>
-			<i>“Be yourself; everyone else is already taken.”</i></h3>
-		<p>- Oscar Wilde</p>
-		<h3>Posted by Robert Morris on <i>02/05/2018</i> at <i>1:04 AM</i></h3>
-	</article>
+    <div style="color: #fff;">
+			<div>
+				<h2 style="color: #d1c395;"><u>Today's Quote</u></h2>
+			</div>
+			<div>
+				
+				<h3>
+					<em>
+						<%= @quote_of_the_day.quote %>
+					</em>
+				</h3>
+				
+				<% if @quote_of_the_day.narration? %>
+						<h4 style="text-align: center;">
+							Narration: <%= simple_format(@quote_of_the_day.narration.capitalize) %>
+						</h4>
+					<% end %>
+				
+				<p>
+					<em> - <%= @quote_of_the_day.author %> </em>
+				</p>
+				
+			</div>
+				
+			<div>
+				<% if @quote_of_the_day.message? %>
+					<h4 style="text-align: center;">
+						Message: <%= simple_format(@quote_of_the_day.message.capitalize) %>
+					</h4>
+				<% end %>
+				
+				<p>
+					- <%= @quote_of_the_day.posted_by %>
+				</p>
+				
+				<small style="color: #d1c395;">
+					<%= "Posted on #{@quote_of_the_day.created_at.strftime('%B %d, %Y')}" %>
+				</small>
+				
+			</div>
+			<% if user_signed_in? %>
+				<%= link_to  "Admin - Edit Quote", quote_of_the_days_url(@quote), class: 'btn btn-warning' %>
+			<% end %>	
+		</div>
 
 	<hr>
 		<!-- recommended readings -->

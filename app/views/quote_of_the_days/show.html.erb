@@ -1,29 +1,42 @@
-<p id="notice"><%= notice %></p>
+<div class="row text-center">
+  <div class="col-md-6 col-md-offset-3">
 
-<p>
-  <strong>Quote:</strong>
-  <%= @quote_of_the_day.quote %>
-</p>
-
-<p>
-  <strong>Narration:</strong>
-  <%= @quote_of_the_day.narration %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @quote_of_the_day.author %>
-</p>
-
-<p>
-  <strong>Message:</strong>
-  <%= @quote_of_the_day.message %>
-</p>
-
-<p>
-  <strong>Posted by:</strong>
-  <%= @quote_of_the_day.posted_by %>
-</p>
-
-<%= link_to 'Edit', edit_quote_of_the_day_path(@quote_of_the_day) %> |
-<%= link_to 'Back', quote_of_the_days_path %>
+    <div class="panel">
+      <div class="panel-heading">
+        <h2>Today's Quote</h2>
+      </div>
+      <div class="panel-body">
+        <h3 style="text-align: center;">
+          <i>
+            <%= @quote_of_the_day.quote %>
+          </i>
+        </h3>
+          <% if @quote_of_the_day.narration? %>
+          <h4 style="text-align: center;">
+            <%= simple_format(@quote_of_the_day.narration) %>
+          </h4>
+          <% end %>
+          <p style="color: #d1c395;">
+            <i> - <%= @quote_of_the_day.author %> </i>
+          </p>
+      </div>
+      <div class="panel-footer">
+        <% if @quote_of_the_day.message? %>
+          <h4 style="text-align: center;">
+            <%= simple_format(@quote_of_the_day.message) %>
+          </h4>
+        <% end %>
+        <p>
+          - <%= @quote_of_the_day.posted_by %>
+        </p>
+        <small>
+          <%= "Posted on #{@quote_of_the_day.created_at.strftime('%B %d, %Y')}" %>
+        </small>
+      </div>
+    </div>
+    
+    <%= link_to 'Edit', edit_quote_of_the_day_path(@quote_of_the_day), class: 'btn btn-warning' %> |
+    <%= link_to 'Back', quote_of_the_days_path, class: 'btn btn-default' %>
+    <br><br>
+  </div> 
+</div>

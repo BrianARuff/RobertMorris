@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @quote_of_the_day = QuoteOfTheDay.first
   end
 
   def about

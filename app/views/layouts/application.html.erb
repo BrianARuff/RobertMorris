@@ -43,8 +43,9 @@
           <li><a href="/load_images">Romo's Pics</a></li>
           <li><a href="<%= contact_path %>">Contact us</a></li>
         <% if user_signed_in? %>
-          <li><a href="<%= bookings_path %>">View Booking Requests</a></li>
-          <li><a href='<%= destroy_user_session_path %>' data-method='delete' rel='nofollow'>Sign Out</a><li>
+          <li><a href="<%= bookings_path %>"> Admin - View Booking Requests</a></li>
+          <li><a href="<%= quote_of_the_days_path %>"> Admin - View All Quotes</a></li>
+          <li><a href='<%= destroy_user_session_path %>' data-method='delete' rel='nofollow'> Admin - Sign Out</a><li>
         <% else %>
           <li><a href="<%= new_user_session_path %>">Sign In</a></li>
       <% end %> 

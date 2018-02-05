@@ -41,7 +41,7 @@
 				
 			</div>
 			<% if user_signed_in? %>
-				<%= link_to  "Admin - Edit Quote", edit_quote_of_the_day(@quote_of_the_day), class: 'btn btn-warning' %>
+				<%= link_to  "Admin - Edit Quote", edit_quote_of_the_day_path(@quote_of_the_day), class: 'btn btn-warning' %>
 			<% end %>	
 		</div>
 

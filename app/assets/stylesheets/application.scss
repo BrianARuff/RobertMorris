@@ -567,6 +567,10 @@ td a {
   color: #D1C395;
 }
 
+.panel {
+  margin: 1rem;
+}
+
 /* date picker */
 
 #ui-datepicker-div {
@@ -652,4 +656,26 @@ td a {
 #main-content > form > div > div > div:nth-child(3) > input {
   background: none;
   color: #D1C395;
+}
+
+/* home section */
+
+.home-section-1 {
+  background: url('https://cdn.pixabay.com/photo/2017/03/09/20/53/microphone-2130806_960_720.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.home-section-a {
+  background: url('https://cdn.pixabay.com/photo/2017/01/23/08/13/microphone-2001751_960_720.png') center no-repeat;
+  background-size: cover;
+}
+
+.home-section-b {
+  background: url('https://cdn.pixabay.com/photo/2017/02/28/12/52/mic-2105643_960_720.jpg') center no-repeat;
+  background-size: cover;
+}
+
+nav {
+  background: asset-url('mic.jpg') no-repeat center;
+  background-size: cover;
 }

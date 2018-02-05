@@ -11,17 +11,17 @@
 						<%= @quote_of_the_day.quote %>
 					</em>
 				</h3>
+
+				<p>
+						<em> - <%= @quote_of_the_day.author %> </em>
+				</p>
 				
 				<% if @quote_of_the_day.narration? %>
 						<h4 style="text-align: center;">
 							Narration: <%= simple_format(@quote_of_the_day.narration.capitalize) %>
 						</h4>
 					<% end %>
-				
-				<p>
-					<em> - <%= @quote_of_the_day.author %> </em>
-				</p>
-				
+					
 			</div>
 				
 			<div>
@@ -41,7 +41,7 @@
 				
 			</div>
 			<% if user_signed_in? %>
-				<%= link_to  "Admin - Edit Quote", quote_of_the_days_url(@quote), class: 'btn btn-warning' %>
+				<%= link_to  "Admin - Edit Quote", edit_quote_of_the_day_url(@quote), class: 'btn btn-warning' %>
 			<% end %>	
 		</div>
 

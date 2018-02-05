@@ -13,14 +13,17 @@
             <%= @quote_of_the_day.quote %>
           </i>
         </h3>
-          <% if @quote_of_the_day.narration? %>
+
+        <p style="color: #d1c395;">
+            <i> - <%= @quote_of_the_day.author %> </i>
+        </p>
+
+        <% if @quote_of_the_day.narration? %>
           <h4 style="text-align: center;">
             <%= simple_format(@quote_of_the_day.narration) %>
           </h4>
-          <% end %>
-          <p style="color: #d1c395;">
-            <i> - <%= @quote_of_the_day.author %> </i>
-          </p>
+        <% end %>
+
       </div>
       <div class="panel-footer">
         <% if @quote_of_the_day.message? %>

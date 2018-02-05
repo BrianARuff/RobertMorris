@@ -123,6 +123,8 @@ nav {
   background: linear-gradient(to right, rgba(74, 100, 125, .99), rgba(59, 83, 106, .99));
   width: 100%;
   opacity: 0.7;
+  border-top: 1px solid #e4af5a !important;
+  border-bottom: 1px solid #e4af5a !important;
 }
 
 nav li {
@@ -661,21 +663,16 @@ td a {
 /* home section */
 
 .home-section-1 {
-  background: url('https://cdn.pixabay.com/photo/2017/03/09/20/53/microphone-2130806_960_720.jpg') center no-repeat;
+  background: #333 asset-url('blackcentermic.jpg') center no-repeat;
   background-size: cover;
 }
 
 .home-section-a {
-  background: url('https://cdn.pixabay.com/photo/2017/01/23/08/13/microphone-2001751_960_720.png') center no-repeat;
+  background: asset-url('mic.jpg') center no-repeat;
   background-size: cover;
 }
 
 .home-section-b {
-  background: url('https://cdn.pixabay.com/photo/2017/02/28/12/52/mic-2105643_960_720.jpg') center no-repeat;
-  background-size: cover;
-}
-
-nav {
-  background: asset-url('mic.jpg') no-repeat center;
+  background: #333 asset-url('goldmic.jpg') center no-repeat;
   background-size: cover;
 }

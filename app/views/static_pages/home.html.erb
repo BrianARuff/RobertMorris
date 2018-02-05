@@ -8,26 +8,26 @@
 				
 				<h3>
 					<em>
-						<%= @quote_of_the_day.quote %>
+						<%= @quote_of_the_day.quote if @quote_of_the_day %>
 					</em>
 				</h3>
 
 				<p>
-						<em> - <%= @quote_of_the_day.author %> </em>
+						<em> - <%= @quote_of_the_day.author if @quote_of_the_day.author %> </em>
 				</p>
 				
-				<% if @quote_of_the_day.narration? %>
+				<% if @quote_of_the_day.narration %>
 						<h4 style="text-align: center;">
-							Narration: <%= simple_format(@quote_of_the_day.narration.capitalize) %>
+							Narration: <%= simple_format(@quote_of_the_day.narration.capitalize) if @quote_of_the_day.narration %>
 						</h4>
 					<% end %>
 					
 			</div>
 				
 			<div>
-				<% if @quote_of_the_day.message? %>
+				<% if @quote_of_the_day.message %>
 					<h4 style="text-align: center;">
-						Message: <%= simple_format(@quote_of_the_day.message.capitalize) %>
+						<%= simple_format(@quote_of_the_day.message.capitalize) if @quote_of_the_day.message %>
 					</h4>
 				<% end %>
 				
@@ -36,7 +36,7 @@
 				</p>
 				
 				<small style="color: #d1c395;">
-					<%= "Posted on #{@quote_of_the_day.created_at.strftime('%B %d, %Y')}" %>
+					<%= "Posted on #{@quote_of_the_day.updated_at.strftime('%B %d, %Y')}" if @quote_of_the_day %>
 				</small>
 				
 			</div>

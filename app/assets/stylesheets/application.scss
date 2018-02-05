@@ -38,7 +38,7 @@
   height: 1080px;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 100%) {
   #main-content > main > iframe {
     padding: 0;
     max-width: 400px;
@@ -53,10 +53,14 @@ body {
   background: #4A647D url('mic.jpg') no-repeat center;
   background-size: cover;
   overflow: scroll;
-  padding: 0 20rem;
+  // padding: 0 0rem;
   color: #e1d6c4 !important;
   font-weight: bold;
   line-height: 2 !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1;
 }
 
 @media (max-width: 768px) {
@@ -662,17 +666,43 @@ td a {
 
 /* home section */
 
-.home-section-1 {
+.home-section-a {
   background: #333 asset-url('blackcentermic.jpg') center no-repeat;
   background-size: cover;
+  color: #D1C395;
 }
 
-.home-section-a {
-  background: asset-url('mic.jpg') center no-repeat;
-  background-size: cover;
+.home-section-a > ul > li {
+  display: block !important;
+  margin: 1rem;
 }
 
-.home-section-b {
-  background: #333 asset-url('goldmic.jpg') center no-repeat;
-  background-size: cover;
+/* home reading section */
+
+@media(min-width: 768px) {
+  .reading-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 5px;
+    // box-sizing: border-box;
+    // height: 200px;
+    // width: 100%;
+    // padding: 10px;
+  }
 }
+
+.reading-title, .reading-title, .reading-description, .reading-container img {
+  border: 1px solid #e4af5a;
+}
+.reading-box {
+  border: 1px solid #e4af5a;
+  margin: 1rem;
+  color: #D1C395;
+}
+
+.reading-container img {
+  box-shadow: 5px 5px 25px 5px #ffffff50;
+  margin: 5rem;
+}
+
+

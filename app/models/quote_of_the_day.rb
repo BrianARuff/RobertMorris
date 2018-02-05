@@ -1,0 +1,2 @@
+class QuoteOfTheDay < ApplicationRecord
+end

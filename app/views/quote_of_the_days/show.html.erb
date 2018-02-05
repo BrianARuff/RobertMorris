@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Quote:</strong>
+  <%= @quote_of_the_day.quote %>
+</p>
+
+<p>
+  <strong>Narration:</strong>
+  <%= @quote_of_the_day.narration %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @quote_of_the_day.author %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @quote_of_the_day.message %>
+</p>
+
+<p>
+  <strong>Posted by:</strong>
+  <%= @quote_of_the_day.posted_by %>
+</p>
+
+<%= link_to 'Edit', edit_quote_of_the_day_path(@quote_of_the_day) %> |
+<%= link_to 'Back', quote_of_the_days_path %>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :quote_of_the_days
   resources :load_images
   resources :speakings
   resources :bookings

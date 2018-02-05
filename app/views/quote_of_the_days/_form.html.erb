@@ -1,0 +1,42 @@
+<%= form_with(model: quote_of_the_day, local: true) do |form| %>
+  <% if quote_of_the_day.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(quote_of_the_day.errors.count, "error") %> prohibited this quote_of_the_day from being saved:</h2>
+
+      <ul>
+      <% quote_of_the_day.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :quote %>
+    <%= form.text_field :quote, id: :quote_of_the_day_quote %>
+  </div>
+
+  <div class="field">
+    <%= form.label :narration %>
+    <%= form.text_area :narration, id: :quote_of_the_day_narration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author, id: :quote_of_the_day_author %>
+  </div>
+
+  <div class="field">
+    <%= form.label :message %>
+    <%= form.text_area :message, id: :quote_of_the_day_message %>
+  </div>
+
+  <div class="field">
+    <%= form.label :posted_by %>
+    <%= form.text_field :posted_by, id: :quote_of_the_day_posted_by %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

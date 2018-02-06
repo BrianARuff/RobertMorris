@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
     @quote_of_the_day = QuoteOfTheDay.first
+    @books = Book.last
   end
 
   def about
@@ -28,5 +29,8 @@ class StaticPagesController < ApplicationController
   end
 
   def wcr
+  end
+
+  def books
   end
 end

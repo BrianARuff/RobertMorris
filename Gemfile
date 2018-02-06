@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+ruby '2.5.0'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'devise'
@@ -13,6 +14,7 @@ gem 'carrierwave'
 gem 'momentjs-rails'
 gem 'fullcalendar'
 gem "fog-aws"
+gem 'haml-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record

@@ -688,27 +688,22 @@ td a {
 @media(min-width: 768px) {
   .reading-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-gap: 5px;
-    // box-sizing: border-box;
-    // height: 200px;
-    // width: 100%;
-    // padding: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1rem;
+    background: #33333320;
+    margin: 1rem;
+    padding: 1rem;
   }
 }
 
-.reading-title, .reading-title, .reading-description, .reading-container img {
-  border: 1px solid #e4af5a;
+.reading-title, .reading-box {
+  border: 1px solid #D1C395;
 }
 .reading-box {
-  border: 1px solid #e4af5a;
-  margin: 1rem;
   color: #D1C395;
 }
 
 .reading-container img {
-  box-shadow: 5px 5px 25px 5px #ffffff50;
-  margin: 5rem;
+  margin: 1rem;
+  padding: 1rem;
 }
-
-

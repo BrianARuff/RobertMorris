@@ -1,6 +1,6 @@
 <section class="home-section-a text-center">
 	
-    <div style="color: #fff;">
+    <divs style="color: #fff;">
 			<div>
 				<h2 style="color: #d1c395;"><u>Today's Quote</u></h2>
 			</div>
@@ -18,7 +18,7 @@
 				
 				<% if @quote_of_the_day.narration %>
 						<h4 style="text-align: center;">
-							Narration: <%= simple_format(@quote_of_the_day.narration.capitalize) if @quote_of_the_day.narration %>
+							<%= simple_format(@quote_of_the_day.narration.capitalize) if @quote_of_the_day.narration %>
 						</h4>
 					<% end %>
 					
@@ -31,8 +31,8 @@
 					</h4>
 				<% end %>
 				
-				<p>
-					- <%= @quote_of_the_day.posted_by %>
+				<p style='color:#d1c395;'>
+					<%= @quote_of_the_day.posted_by.split(' ').each { |word| word.capitalize! }.join(' ') %>
 				</p>
 				
 				<small style="color: #d1c395;">
@@ -41,54 +41,62 @@
 				
 			</div>
 			<% if user_signed_in? %>
-				<%= link_to  "Admin - Edit Quote", edit_quote_of_the_day_path(@quote_of_the_day), class: 'btn btn-warning' %>
+				<%= link_to  "Admin - Edit Quote", edit_quote_of_the_day_path(@quote_of_the_day), class: 'btn btn-block btn-warning', style: 'font-size: 24px;' %>
 			<% end %>	
-		</div>
+		</divs>
 
 		<!-- recommended readings -->
 
-	<article class="reading-container">
+	<article class="reading-container text-center">
 		
 		<div class="reading-box box-1">
 			<div class="reading-title">
-				<h1>Recommended Readings</h1>
+				<h1>
+					<%= simple_format(@books.book_name).html_safe %>
+				</h1>
 			</div>
-				<img src="https://images.gr-assets.com/books/1355074500l/13705557.jpg" alt="ruby on rails">
-			<div class="reading-description">
-				<h3>This book is about Ruby on Rails. It is highly recommended for it's indepth guidance.</h3>
+			<div>
+					<%= image_tag  @books.book_one %>				
 			</div>
 		</div>
 
 		<div class="reading-box box-2">
-			<div class="reading-title">
-				<h1>Recommended Readings</h1>
-			</div>
-				<img src="https://images.gr-assets.com/books/1355074500l/13705557.jpg" alt="ruby on rails">
-			<div class="reading-description">
-				<h3>This book is about Ruby on Rails. It is highly recommended for it's indepth guidance.</h3>
-			</div>
-		</div>
-
-		<div class="reading-box box-3">
-			<div class="reading-title">
-				<h1>Recommended Readings</h1>
-			</div>
-				<img src="https://images.gr-assets.com/books/1355074500l/13705557.jpg" alt="ruby on rails">
-			<div class="reading-description">
-				<h3>This book is about Ruby on Rails. It is highly recommended for it's indepth guidance.</h3>
-			</div>
-		</div>
-
-		<div class="reading-box box-4">
 				<div class="reading-title">
-					<h1>Recommended Readings</h1>
+					<h1>
+						<%= simple_format(@books.book_two_name) %>
+					</h1>
 				</div>
-					<img src="https://images.gr-assets.com/books/1355074500l/13705557.jpg" alt="ruby on rails">
-				<div class="reading-description">
-					<h3>This book is about Ruby on Rails. It is highly recommended for it's indepth guidance.</h3>
-				</div>
+					<%= image_tag  @books.book_two %>
 			</div>
 
-	</article>
+			<div class="reading-box box-3">
+					<div class="reading-title">
+						<h1>
+							<%= simple_format(@books.book_three_name) %>
+						</h1>
+					</div>
+						<%= image_tag  @books.book_three %>
+				</div>
 
+				<div class="reading-box box-4">
+						<div class="reading-title">
+							<h1>
+								<%= simple_format(@books.book_four_name) %>
+							</h1>
+						</div>
+							<%= image_tag  @books.book_four %>
+					</div>
+
+					<div class="reading-box box-5">
+							<div class="reading-title">
+								<h1>
+									<%= simple_format(@books.book_five_name) %>
+								</h1>
+							</div>
+								<%= image_tag  @books.book_five %>
+						</div>
+	</article>
+	<% if user_signed_in? %>
+	<%= link_to 'Edit Books', edit_book_path(@books), class: 'btn btn-warning btn-block', style: 'font-size: 24px;' %>
+<% end %>
 </section>

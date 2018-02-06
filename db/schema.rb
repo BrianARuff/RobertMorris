@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180205160715) do
+ActiveRecord::Schema.define(version: 20180206024419) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,32 @@ ActiveRecord::Schema.define(version: 20180205160715) do
     t.date "date"
     t.string "time"
     t.string "booking_date"
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.string "book_name"
+    t.string "book_image"
+    t.string "book_description"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "book_one"
+    t.string "book_two"
+    t.string "book_three"
+    t.string "book_four"
+    t.string "book_five"
+    t.string "book_two_name"
+    t.string "book_two_image"
+    t.text "book_two_description"
+    t.string "book_three_name"
+    t.string "book_three_image"
+    t.text "book_three_description"
+    t.string "book_four_name"
+    t.string "book_four_image"
+    t.text "book_four_description"
+    t.string "book_five_name"
+    t.string "book_five_image"
+    t.text "book_five_description"
   end
 
   create_table "events", force: :cascade do |t|

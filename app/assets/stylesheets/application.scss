@@ -105,7 +105,6 @@ body {
   align-items: center;
   animation: fadein 2s;
   position: absolute;
-  z-index: 999;
 }
 
 #dropdown-menu ul li {
@@ -707,4 +706,11 @@ td a {
 .reading-container img {
   margin: 1rem;
   padding: 1rem;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .admin-panel {
+    display: none !important; 
+  }
 }

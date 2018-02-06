@@ -14,7 +14,17 @@
   </head>
   <body>
       <div id="main-content">
-      <nav style="border: none;">
+        
+        <!-- admin panel -->
+        <% if user_signed_in? %>
+          <nav class="admin-panel" style="display: block;" class="text-center">
+            <h1 style="text-align:center;">Administrater Panel</h1>
+            <%= render  "layouts/nav" %>
+          </nav>
+        <% end %>
+        
+        <!-- regular nav -->
+        <nav id='nav' style="border: none;">
         <span class="open-slide">
             <a href="#" onclick="openSlideMenu()" data-turbolinks="false" id="slideOpen">
               <svg width="30" height="30">
@@ -48,13 +58,6 @@
           <li><a href="<%= new_user_session_path %>">Sign In</a></li>
       <% end %> 
       </nav>
-      
-      <% if user_signed_in? %>
-        <nav style="display: block;" class="text-center">
-          <h1>Administrater Panel</h1>
-          <%= render  "layouts/nav" %>
-        </nav>
-      <% end %>
 
       <div id="side-menu" class="side-nav">
         <a href="#" class="btn-close" onclick="closeSlideMenu()" data-turbolinks="false">&times;</a>
@@ -84,7 +87,7 @@
     </div>
     <script>
       document.getElementById("drop-down").addEventListener('click', function() {
-	      document.getElementById('dropdown-menu').classList.toggle('events-active');
+        document.getElementById('dropdown-menu').classList.toggle('events-active');
       });
     </script>
     

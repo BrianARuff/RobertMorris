@@ -48,11 +48,13 @@
           <li><a href="<%= new_user_session_path %>">Sign In</a></li>
       <% end %> 
       </nav>
-
-      <nav style="display: block;" class="text-center">
-        <h1>Administrater Panel</h1>
-        <%= render  "layouts/nav" %>
-      </nav>
+      
+      <% if user_signed_in? %>
+        <nav style="display: block;" class="text-center">
+          <h1>Administrater Panel</h1>
+          <%= render  "layouts/nav" %>
+        </nav>
+      <% end %>
 
       <div id="side-menu" class="side-nav">
         <a href="#" class="btn-close" onclick="closeSlideMenu()" data-turbolinks="false">&times;</a>

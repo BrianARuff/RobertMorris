@@ -1,5 +1,7 @@
 class QuoteOfTheDaysController < ApplicationController
   before_action :set_quote_of_the_day, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+
 
   # GET /quote_of_the_days
   # GET /quote_of_the_days.json

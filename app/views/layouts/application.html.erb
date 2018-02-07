@@ -16,7 +16,7 @@
       <div id="main-content">
         
         <!-- admin panel -->
-        <% if user_signed_in? %>
+        <% if user_signed_in? && current_user.role %>
           <nav class="admin-panel" style="display: block;" class="text-center">
             <h1 style="text-align:center;">Administrater Panel</h1>
             <%= render  "layouts/nav" %>

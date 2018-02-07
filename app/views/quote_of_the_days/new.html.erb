@@ -1,6 +1,9 @@
+<% if current_user.role %>
+
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <h1 class="text-center">Create a New Quote of the Day</h1>
     <%= render 'form', quote_of_the_day: @quote_of_the_day %>
   </div>
 </div>
+<% end %>

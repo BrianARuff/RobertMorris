@@ -1,3 +1,5 @@
+<% if current_user.role %>
+
 <%= form_with(model: quote_of_the_day, local: true) do |form| %>
   <% if quote_of_the_day.errors.any? %>
     <div id="error_explanation">
@@ -39,4 +41,5 @@
   <div class="actions">
     <%= form.submit 'Create Quote', class: 'btn btn-primary btn-block' %>
   </div>
+<% end %>
 <% end %>

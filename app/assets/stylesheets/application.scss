@@ -103,6 +103,7 @@ body {
   align-items: center;
   animation: fadein 2s;
   position: absolute;
+  z-index: 999;
 }
 
 #dropdown-menu ul li {
@@ -234,12 +235,6 @@ nav a:hover, #main-content > nav > a:hover, #main-content > nav > li > a:focus  
   margin-left: 50px;
   color: #D1C395;
 }
-
-#main-content {
-  transition: margin-left 0.5s;
-}
-
-
 
 @media (max-width: 768px) {
   .navbar-nav {
@@ -624,6 +619,7 @@ td a {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   margin: 0 1rem;
+
 }
 
 .REBAC-container .panel {
@@ -708,5 +704,16 @@ td a {
 @media screen and (max-width: 768px) {
   .admin-panel {
     display: none !important; 
+  }
+  #main-content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: none !important;
+  }
+  body {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: none !important;
   }
 }

@@ -57,9 +57,7 @@ body {
   background: #4A647D url('mic.jpg') no-repeat center;
   background-size: cover;
   overflow: scroll;
-  // padding: 0 0rem;
   color: #e1d6c4 !important;
-  font-weight: bold;
   line-height: 2 !important;
   display: flex;
   flex-direction: row;
@@ -127,10 +125,10 @@ nav {
   align-items: center;
   justify-content: center;
   list-style: none;
-  padding: 4rem;
-  background: linear-gradient(to right, rgba(74, 100, 125, .99), rgba(59, 83, 106, .99));
-  width: 100%;
-  opacity: 0.7;
+  padding: 10rem;
+  background: #333 no-repeat center;
+  background-blend-mode: difference;
+  background-size: cover;
   border-top: 1px solid #e4af5a !important;
   border-bottom: 1px solid #e4af5a !important;
 }
@@ -440,35 +438,37 @@ body > main > div > form > div.actions > input:hover,
   font-weight: normal;
  }
 
- .flex-container { 
-  padding: .5vw;
-  font-size: 0;
-  display: -ms-flexbox;
-  -ms-flex-wrap: wrap;
-  -ms-flex-direction: column;
-  -webkit-flex-flow: row wrap; 
-  flex-flow: row wrap; 
-  display: -webkit-box;
-  display: flex;
-}
-.flex-box { 
-  -webkit-box-flex: auto;
-  -ms-flex: auto;
-  flex: auto; 
-  width: 200px; 
-  margin: .5vw; 
-}
- .flex-img,
- .flex-vid { 
-  width: 100%; 
-  height: auto; 
-}
+ .grid-container {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+ }
 
-@media screen and (max-width: 768px) {
-  .flex-box { margin: 0; }
-  .flex-container { padding: 0; }
-  
-}
+ .grid-container > .panel {
+   max-width: 33.3333333%;
+ }
+
+ .grid-container iframe {
+   max-width: 100%;
+ }
+
+ .gridbox {
+   margin: .5rem;
+ }
+
+ @media (max-width: 768px) {
+   .grid-container {
+     display: block;
+     width: 100%; 
+     margin: 0 auto;
+   }
+   .grid.panel {
+     width: 100% !important;
+   }
+   #main-content > div.grid-container > div:nth-child(1) > div.panel-heading {width: 100%;}
+ }
 
 address {
   display: flex;
@@ -673,9 +673,13 @@ td a {
 /* home section */
 
 .home-section-a {
-  background: #333 asset-url('blackcentermic.jpg') center no-repeat;
+  background: asset-url('blackcentermic.jpg') center no-repeat;
   background-size: cover;
-  color: #D1C395;
+}
+
+.home-section-a > div, .home-section-a h4 {
+  color: rgba(255, 255, 255, 0.767) !important;
+  text-align: center;
 }
 
 .home-section-a > ul > li {
@@ -685,28 +689,16 @@ td a {
 
 /* home reading section */
 
-@media(min-width: 768px) {
-  .reading-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 1rem;
-    background: #33333320;
-    margin: 1rem;
-    padding: 1rem;
-  }
+.reading-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.reading-title, .reading-box {
-  border: 1px solid #D1C395;
-}
 .reading-box {
-  color: #D1C395;
-}
-
-.reading-container img {
-  margin: 1rem;
-  padding: 1rem;
-  max-width: 100%;
+  margin: 2rem;
 }
 
 @media screen and (max-width: 768px) {

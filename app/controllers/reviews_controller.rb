@@ -6,6 +6,7 @@ class ReviewsController < ApplicationController
   # GET /reviews.json
   def index
     @reviews = Review.all
+    @average_rating = (Review.pluck(:rating).sum / Review.pluck(:rating).length).to_i
   end
 
   # GET /reviews/1

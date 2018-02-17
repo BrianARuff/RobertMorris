@@ -4,4 +4,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :speakings
   has_many :books
+  has_many :reviews
 end

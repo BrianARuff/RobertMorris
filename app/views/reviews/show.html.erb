@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <p id="notice">
+      <%= notice %>
+    </p>
+    <p>
+      <b>User Email:</b>
+      <%= @review.user.email %>
+    </p>
+    <p>
+      <b>Name:</b>
+      <%= @review.name %>
+    </p>
+    <p>
+      <b>Message:</b>
+      <%= @review.message %>
+    </p>
+    <p>
+      <b>Rating:</b><br>
+      <span id='rating'></span><% @review.rating %></span>
+      <script>
+        var rating = <%= @review.rating %>
+        if (rating === 5) {
+          document.getElementById('rating').innerHTML = "<img src='/images/star-on.png'>".repeat(5);
+        
+        } else if (rating === 4) {
+          document.getElementById('rating').innerHTML = "<img src='/images/star-on.png'>".repeat(4);
+        
+        } else if (rating === 3) {
+          document.getElementById('rating').innerHTML = "<img src='/images/star-on.png'>".repeat(3);
+        
+        } else if (rating === 2) {
+          document.getElementById('rating').innerHTML = "<img src='/images/star-on.png'>".repeat(2);
+
+        } else if (rating === 1) {
+          document.getElementById('rating').innerHTML = "<img src='/images/star-on.png'>"
+        
+        } else {
+          'No rating provided'
+        }
+        console.log(rating);
+      </script>
+    </p>
+
+    <%= link_to 'Edit', edit_review_path(@review), class: 'btn btn-warning btn-block' %>
+  </div>
+</div>

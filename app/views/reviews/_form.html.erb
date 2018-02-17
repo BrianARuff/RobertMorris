@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  <%= form_for @review do |f| %>
+    <% if @review.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= "#{pluralize(@review.errors.count, "error")} prohibited this review from being saved:" %>
+        </h2>
+        <ul>
+          <% @review.errors.full_messages.each do |message| %>
+            <li>
+              <%= message %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control', autofocus: true %>
+    </div>
+    
+    <div class="form-group">
+      <%= f.label :message %>
+      <%= f.text_field :message, class: 'form-control'%>
+    </div>
+    
+    <div class="form-group">
+      <%= f.label :rating %>
+      <%= f.number_field :rating, class: 'form-control' %>
+    </div>
+
+    <% if current_user.role %>
+    <div class="form-group">
+      <%= f.label 'To make post public, type in yes in the form field below'  %>
+      <%= f.text_field :show, class: 'form-control' %>
+    </div>
+    <% end %>
+
+    <div class="actions">
+      <%= f.submit 'Save', class: 'btn btn-primary btn btn-block' %>
+    </div>
+  <% end %>
+  </div>
+</div>

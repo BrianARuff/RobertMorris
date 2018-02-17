@@ -2,7 +2,7 @@
   <div class="col-md-6 col-md-offset-3">
     <h1 class="text-center">All Reviews</h1>
     <% @reviews.each do |review| %>
-    <% if review.show == 'yes' %>
+    <% if review.show == 'yes' || current_user.role %>
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <p id="notice">

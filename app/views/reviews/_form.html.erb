@@ -35,7 +35,7 @@
 
     <% if current_user.role %>
     <div class="form-group">
-      <%= f.label 'To make post public, type in yes in the form field below'  %>
+      <%= f.label 'To make post public, type yes(lowercase) in the form field below'  %>
       <%= f.text_field :show, class: 'form-control' %>
     </div>
     <% end %>

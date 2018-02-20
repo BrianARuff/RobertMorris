@@ -123,10 +123,11 @@ body {
 nav {
   display: flex;
   flex-wrap: wrap;
+  flex: 1;
   align-items: center;
   justify-content: center;
   list-style: none;
-  padding: 10rem;
+  padding: 10rem 0;
   background: #333 no-repeat center;
   background-blend-mode: difference;
   background-size: cover;
@@ -711,8 +712,12 @@ td a {
     overflow: none !important;
   }
   body {
-  margin: 0 !important;
+  margin: 0rem !important;
   padding: 0 !important;
   overflow: none !important;
   }
+}
+
+#slideOpen > svg {
+  margin: 2rem;
 }

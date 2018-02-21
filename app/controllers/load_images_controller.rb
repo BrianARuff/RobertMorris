@@ -6,7 +6,7 @@ class LoadImagesController < ApplicationController
   # GET /load_images
   # GET /load_images.json
   def index
-    @load_images = LoadImage.all
+    @load_images = LoadImage.all.order(image: :asc)
   end
 
   # GET /load_images/1

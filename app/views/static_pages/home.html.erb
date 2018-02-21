@@ -44,10 +44,12 @@
 				<%= link_to  "Admin - Edit Quote", edit_quote_of_the_day_path(@quote_of_the_day), class: 'btn btn-block btn-warning', style: 'font-size: 24px;' %>
 			<% end %>	
 	</div>
+</section>
 
 
 		<!-- recommended readings -->
-		<h1>Recommended Readings</h1>
+	<section class="books">
+		<h1 class="text-center">Recommended Readings</h1>
 		<article class="reading-container text-center">
 			
 			<div class="reading-box box-1">
@@ -100,4 +102,4 @@
 		<% if user_signed_in? && current_user.role %>
 		<%= link_to 'Edit Books', edit_book_path(@books), class: 'btn btn-warning btn-block', style: 'font-size: 24px;' %>
 	<% end %>
-</section>
+	</section>

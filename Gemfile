@@ -12,6 +12,7 @@ gem 'devise'
 gem 'jquery-ui-rails'
 gem 'carrierwave'
 gem 'carrierwave-video'
+gem "puma_worker_killer"
 gem 'momentjs-rails'
 gem 'fullcalendar'
 gem "fog-aws"

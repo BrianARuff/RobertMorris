@@ -103,6 +103,7 @@ GEM
       nokogiri (>= 1.5.11, < 2.0.0)
     formatador (0.2.5)
     fullcalendar (3.8.0)
+    get_process_mem (0.2.1)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     haml (5.0.4)
@@ -157,6 +158,9 @@ GEM
     pg (0.21.0)
     public_suffix (3.0.1)
     puma (3.11.0)
+    puma_worker_killer (0.1.0)
+      get_process_mem (~> 0.2)
+      puma (>= 2.7, < 4)
     rack (2.0.3)
     rack-test (0.8.2)
       rack (>= 1.0, < 3)
@@ -268,6 +272,7 @@ DEPENDENCIES
   momentjs-rails
   pg (~> 0.18)
   puma (~> 3.7)
+  puma_worker_killer
   rails (~> 5.1.4)
   sass-rails (~> 5.0)
   selenium-webdriver

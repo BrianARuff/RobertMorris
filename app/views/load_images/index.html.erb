@@ -10,7 +10,13 @@
   <h2><%= image.name %></h2>
   </div>
   <div class="panel-body">
-  <%= link_to (image_tag (image.image.url), {class: 'img-responsive'}), image %>
+    
+    <% if image.video && !image.image.url %>
+      <%= video_tag image.video.to_s, controls: true %>    
+    <% elsif image.image.url %>
+      <%= link_to (image_tag (image.image.url), {class: 'img-responsive'}), load_images_url(image) %>
+    <% end %>
+
   </div>
   <div class="panel-footer">
     <ul>
@@ -18,7 +24,9 @@
     </ul>
   </div>
 </div>
+
+
 <% end %>
 <%= link_to 'Upload New Image', new_load_image_path, class: 'btn btn-default btn-block' %>
-</div>
+</>
 </div>

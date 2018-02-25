@@ -1,3 +1,5 @@
+
+<% if @quote_of_the_day %>
 <section class="home-section-a text-center">
 	<div class="quote">
 
@@ -45,9 +47,11 @@
 			<% end %>	
 	</div>
 </section>
+<% end %>
 
 
 		<!-- recommended readings -->
+  <% if @books %>
 	<section class="books">
 		<h1 class="text-center">Recommended Readings</h1>
 		<article class="reading-container text-center">
@@ -103,3 +107,4 @@
 		<%= link_to 'Edit Books', edit_book_path(@books), class: 'btn btn-warning btn-block', style: 'font-size: 24px;' %>
 	<% end %>
 	</section>
+  <% end %>

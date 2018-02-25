@@ -727,6 +727,8 @@ td a {
   margin: 2rem;
 }
 
-#main-content > div.row > div > div > div.panel-body > a > img {
+#main-content > div.row > div > div > div.panel-body > a > img,
+#main-content > div.row > div > div > div.panel-body > video,
+#main-content > div.row > div > div.panel-body > video {
   width: 100%;
 }

@@ -1,18 +1,24 @@
-<div class="row"><div class="col-md-6 col-md-offset-3">
-<p id="notice"><%= notice %></p>
-<div class="panel text-center grid">
-  <div class="panel-heading">
-  <h2><%= @load_image.name %></h2>
+<div class="row">
+  <div class="panel text-center grid">
+    <div class="panel-heading">
+    <h2><%= @load_image.name %></h2>
+    </div>
+    <div class="panel-body">
+   
+    <% if @load_image.video && !@load_image.image.url %>
+      <%= video_tag @load_image.video.to_s, controls: true if @load_image.video %>    
+    <% elsif @load_image.image.url %>
+      <%= link_to (image_tag (@load_image.image.url), {class: 'img-responsive'}), load_images_url(@image) if @load_image.image.url %>
+    <% end %>
+
+    </div>
+    <div class="panel-footer">
+      <ul>
+        <h3><%= @load_image.description %></h3>
+      </ul>
+    </div>
   </div>
-  <div class="panel-body">
-  <%= link_to (image_tag (@load_image.image.url), {class: 'img-responsive'}), load_images_url(@image) %>
-  </div>
-  <div class="panel-footer">
-    <ul>
-      <h3><%= @load_image.description %></h3>
-    </ul>
+  <%= link_to 'Edit', edit_load_image_path, class: 'btn btn-warning btn-block text-center' %>
+  <a href='/load_images/<%=@load_image.id%>%' data-method='delete' data-confirm='Are you sure?' class= 'btn btn-block btn-danger'>Delete</a>
   </div>
 </div>
-<%= link_to 'Edit', edit_load_image_path, class: 'btn btn-warning btn-block text-center' %>
-<a href='/load_images/<%=@load_image.id%>%' data-method='delete' data-confirm='Are you sure?' class= 'btn btn-block btn-danger'>Delete</a>
-</div></div>

@@ -24,8 +24,14 @@
 
     <div class="form-group">
       <%= form.label :image %>
+      <h3>Images</h3>
       <%= form.file_field :image, class: 'form-control' %>
+      <h3>Videos</h3>
+      <%= form.file_field :video, class: 'form-control'%>
     </div>
+
+
+
 
     <div class="actions">
       <%= form.submit 'Submit', class: 'btn btn-default btn-block text-center' %>

@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    @quote_of_the_day = QuoteOfTheDay.first
+    @quote_of_the_day = QuoteOfTheDay.last
     @books = Book.last
   end
 

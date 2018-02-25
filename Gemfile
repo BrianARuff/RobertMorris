@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'jquery-ui-rails'
 gem 'carrierwave'
+gem 'carrierwave-video'
 gem 'momentjs-rails'
 gem 'fullcalendar'
 gem "fog-aws"

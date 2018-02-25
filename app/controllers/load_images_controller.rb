@@ -71,6 +71,6 @@ class LoadImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def load_image_params
-      params.require(:load_image).permit(:name, :description, :picture, :image, :user_id)
+      params.require(:load_image).permit(:name, :description, :picture, :image, :user_id, :video)
     end
 end

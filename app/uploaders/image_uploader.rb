@@ -4,7 +4,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
-
   if Rails.env.test? or Rails.env.cucumber?
     CarrierWave.configure do |config|
       config.storage = :file
@@ -24,6 +23,18 @@ class ImageUploader < CarrierWave::Uploader::Base
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
+
+
+  # store files using RAM instead of disk space and RAM
+  def move_to_cache
+    true
+  end
+
+  def move_to_store
+    true
+  end
+
+  
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
@@ -54,10 +65,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   def content_type_whitelist
     /image\//
   end
+
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
-  # def filename
-  #   "something.jpg" if original_filename
-  # end
+  def filename
+    "something.jpg" if original_filename
+  end
 
 end

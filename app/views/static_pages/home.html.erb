@@ -57,51 +57,26 @@
 		<article class="reading-container text-center">
 			
 			<div class="reading-box box-1">
-				<div class="reading-title">
-					<h1>
-						<%= simple_format(@books.book_name).html_safe %>
-					</h1>
-				</div>
 				<div>
 						<%= image_tag  @books.book_one %>				
 				</div>
 			</div>
 
 			<div class="reading-box box-2">
-					<div class="reading-title">
-						<h1>
-							<%= simple_format(@books.book_two_name) %>
-						</h1>
-					</div>
 						<%= image_tag  @books.book_two %>
 				</div>
 
 					<div class="reading-box box-4">
-							<div class="reading-title">
-								<h1>
-									<%= simple_format(@books.book_four_name) %>
-								</h1>
-							</div>
 								<%= image_tag  @books.book_four %>
 						</div>
 
 						<div class="reading-box box-3">
-								<div class="reading-title">
-									<h1>
-										<%= simple_format(@books.book_three_name) %>
-									</h1>
-								</div>
 									<%= image_tag  @books.book_three %>
 							</div>						
 
 						<div class="reading-box box-5">
-								<div class="reading-title">
-									<h1>
-										<%= simple_format(@books.book_five_name) %>
-									</h1>
-								</div>
-									<%= image_tag  @books.book_five %>
-							</div>
+							<%= image_tag  @books.book_five %>
+						</div>
 		</article>
 		<% if user_signed_in? && current_user.role %>
 		<%= link_to 'Edit Books', edit_book_path(@books), class: 'btn btn-warning btn-block', style: 'font-size: 24px;' %>
